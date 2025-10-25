@@ -54,7 +54,7 @@ class FirestoreController {
   }
 
   Stream<List<Projects>> getProjects() {
-    return db.collection('projects').snapshots().map((snapshot) {
+    return db.collection('Projects').snapshots().map((snapshot) {
       return snapshot.docs.map((doc) {
         return Projects.fromJson(doc.data());
       }).toList();

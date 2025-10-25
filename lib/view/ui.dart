@@ -7,6 +7,7 @@ import 'package:my_portfolio/view/widgets/certificates_section.dart';
 import 'package:my_portfolio/view/widgets/contact_section.dart';
 import 'package:my_portfolio/view/widgets/education_section.dart';
 import 'package:my_portfolio/view/widgets/programming_section.dart';
+import 'package:my_portfolio/view/widgets/projects/projects_section.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
 import 'package:my_portfolio/view/widgets/skills_section.dart';
 import 'package:my_portfolio/view/widgets/tools_section.dart';
@@ -103,6 +104,7 @@ class _UiState extends State<Ui> {
                 SizedBox(height: 150.h),
                 EducationSection(),
                 SizedBox(height: 150.h),
+                ProjectsSection(),
                 SizedBox(height: 150.h),
                 SkillsSection(),
                 SizedBox(height: 150.h),
