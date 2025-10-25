@@ -20,10 +20,17 @@ class Ui extends StatefulWidget {
 }
 
 class _UiState extends State<Ui> {
+  final ScrollController _scrollController = ScrollController();
+
   final homeKey = GlobalKey();
   final aboutKey = GlobalKey();
   final projectsKey = GlobalKey();
   final contactKey = GlobalKey();
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+  }
 
   void scrollToSection(GlobalKey key) {
     final context = key.currentContext;
@@ -41,9 +48,16 @@ class _UiState extends State<Ui> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff041112),
+        actionsPadding: EdgeInsets.only(left: 100.w),
         actions: [
           TextButton(
-            onPressed: () => scrollToSection(homeKey),
+            onPressed: () {
+              _scrollController.animateTo(
+                0,
+                duration: const Duration(milliseconds: 1500),
+                curve: Curves.easeOut,
+              );
+            },
             child: Text(
               "Home",
               style: Appstyles.primary.copyWith(fontSize: 30.sp),
@@ -74,6 +88,7 @@ class _UiState extends State<Ui> {
       ),
       backgroundColor: Color(0xff041112),
       body: ListView(
+        controller: _scrollController,
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 200.sp, vertical: 20.sp),
