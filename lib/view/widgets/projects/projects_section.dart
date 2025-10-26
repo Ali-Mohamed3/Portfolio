@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
+import 'package:my_portfolio/core/widgets/custom_button.dart';
 import 'package:my_portfolio/view/widgets/projects/projects_widget.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
 

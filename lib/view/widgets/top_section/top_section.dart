@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
-import 'package:my_portfolio/view/widgets/getInfo.dart';
-import 'package:my_portfolio/view/widgets/icons_widget.dart';
-import 'package:my_portfolio/view/widgets/photo_widget.dart';
+import 'package:my_portfolio/view/widgets/top_section/getInfo.dart';
+import 'package:my_portfolio/view/widgets/top_section/icons_widget.dart';
+import 'package:my_portfolio/view/widgets/top_section/photo_widget.dart';
 
 class TopSection extends StatefulWidget {
   const TopSection({super.key});
@@ -28,7 +28,7 @@ class _TopSectionState extends State<TopSection> {
             SizedBox(height: 15.h),
             IconsWidget(),
             SizedBox(height: 40.h),
-            CustomButton(text: "Download my cv"),
+            CustomButton(text: "Download my CV"),
           ],
         ),
         PhotoWidget(),

@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
-import 'package:my_portfolio/view/widgets/about_me_section.dart';
-import 'package:my_portfolio/view/widgets/bottom_section.dart';
-import 'package:my_portfolio/view/widgets/certificates_section.dart';
-import 'package:my_portfolio/view/widgets/contact_section.dart';
-import 'package:my_portfolio/view/widgets/education_section.dart';
-import 'package:my_portfolio/view/widgets/programming_section.dart';
+import 'package:my_portfolio/view/widgets/about_me/about_me_section.dart';
+import 'package:my_portfolio/view/widgets/bottom_section/bottom_section.dart';
+import 'package:my_portfolio/view/widgets/certificates/certificates_section.dart';
+import 'package:my_portfolio/view/widgets/contact/contact_section.dart';
+import 'package:my_portfolio/view/widgets/education/education_section.dart';
+import 'package:my_portfolio/view/widgets/programming_languages/programming_section.dart';
 import 'package:my_portfolio/view/widgets/projects/projects_section.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
-import 'package:my_portfolio/view/widgets/skills_section.dart';
-import 'package:my_portfolio/view/widgets/tools_section.dart';
-import 'package:my_portfolio/view/widgets/top_section.dart';
+import 'package:my_portfolio/view/widgets/skills/skills_section.dart';
+import 'package:my_portfolio/view/widgets/tools/tools_section.dart';
+
+import 'package:my_portfolio/view/widgets/top_section/top_section.dart';
 
 class Ui extends StatefulWidget {
   const Ui({super.key});
 
-  @override
   State<Ui> createState() => _UiState();
 }
 
@@ -103,14 +103,15 @@ class _UiState extends State<Ui> {
                 Container(key: aboutKey, child: AboutMeSection()),
                 SizedBox(height: 150.h),
                 EducationSection(),
-                SizedBox(height: 150.h),
-                ProjectsSection(),
+
                 SizedBox(height: 150.h),
                 SkillsSection(),
                 SizedBox(height: 150.h),
                 ProgrammingSection(),
                 SizedBox(height: 150.h),
                 ToolsSection(),
+                SizedBox(height: 150.h),
+                Container(key: projectsKey, child: ProjectsSection()),
                 SizedBox(height: 150.h),
                 CertificatesSection(),
                 SizedBox(height: 150.h),
