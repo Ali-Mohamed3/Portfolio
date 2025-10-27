@@ -8,6 +8,7 @@ class AppAssets {
   static const String education = "assets/icons/education-svgrepo-com.svg";
   static const String copyRight = "assets/icons/copyright-svgrepo-com (1).svg";
   static const String robot = "assets/icons/robot-svgrepo-com.svg";
+  static const String bulb = "assets/icons/bulb-svgrepo-com.svg";
   static const String contact =
       "assets/icons/contact-headset-communication-svgrepo-com.svg";
 }

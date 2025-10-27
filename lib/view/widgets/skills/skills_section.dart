@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
-import 'package:my_portfolio/view/widgets/skill_widget.dart' show SkillWidget;
+import 'package:my_portfolio/view/widgets/skills/skill_widget.dart';
 
 class SkillsSection extends StatefulWidget {
   const SkillsSection({super.key});

@@ -30,7 +30,7 @@ class _ProjectsWidgetState extends State<ProjectsWidget> {
             viewportFraction: 1,
             enableInfiniteScroll: false,
             autoPlay: true,
-            autoPlayInterval: Duration(seconds: 4),
+            autoPlayInterval: Duration(seconds: 10),
           ),
           items: projects.map((x) {
             return ProjectItem(

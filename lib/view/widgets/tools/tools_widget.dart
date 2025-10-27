@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/controller/firestore_controller/firestore_controller.dart';
 import 'package:my_portfolio/models/tools_apps.dart';
-import 'package:my_portfolio/view/widgets/skill_item.dart';
+import 'package:my_portfolio/view/widgets/tools/tools_item.dart';
 
 class ToolsWidget extends StatefulWidget {
   const ToolsWidget({super.key});
@@ -35,7 +35,7 @@ class _ToolsWidgetState extends State<ToolsWidget> {
           shrinkWrap: true,
           itemCount: tools.length,
           itemBuilder: (context, index) {
-            return SkillItem(skill: tools[index].name!);
+            return ToolsItem(tool: tools[index].name!);
           },
         );
       },

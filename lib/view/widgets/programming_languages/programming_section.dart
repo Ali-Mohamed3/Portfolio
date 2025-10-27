@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
-import 'package:my_portfolio/view/widgets/programming_langs.dart';
+import 'package:my_portfolio/view/widgets/programming_languages/programming_langs.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
 
 class ProgrammingSection extends StatefulWidget {

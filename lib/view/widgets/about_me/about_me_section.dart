@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
-import 'package:my_portfolio/view/widgets/description_widget.dart';
+import 'package:my_portfolio/view/widgets/about_me/description_widget.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
 
 class AboutMeSection extends StatefulWidget {

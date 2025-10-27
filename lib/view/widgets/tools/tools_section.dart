@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
-import 'package:my_portfolio/view/widgets/tools_widget.dart';
+import 'package:my_portfolio/view/widgets/tools/tools_widget.dart';
 
 class ToolsSection extends StatefulWidget {
   const ToolsSection({super.key});

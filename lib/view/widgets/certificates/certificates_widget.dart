@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/controller/firestore_controller/firestore_controller.dart';
 import 'package:my_portfolio/models/certificates.dart';
-import 'package:my_portfolio/view/widgets/certificate_item.dart';
+import 'package:my_portfolio/view/widgets/certificates/certificate_item.dart';
 
 class CertificatesWidget extends StatefulWidget {
   const CertificatesWidget({super.key});
@@ -31,7 +31,6 @@ class _CertificatesWidgetState extends State<CertificatesWidget> {
             enableInfiniteScroll: false,
             autoPlay: true,
             autoPlayInterval: Duration(seconds: 4),
-            
           ),
           items: certificates.map((x) {
             return CertificateItem(image: x.image!);

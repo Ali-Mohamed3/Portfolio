@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/controller/firestore_controller/firestore_controller.dart';
-import 'package:my_portfolio/view/widgets/skill_item.dart';
 import 'package:my_portfolio/models/programming_langs.dart' as model;
+import 'package:my_portfolio/view/widgets/programming_languages/programming_item.dart';
+import 'package:my_portfolio/view/widgets/skills/skill_item.dart';
 
 class ProgrammingLangs extends StatefulWidget {
   const ProgrammingLangs({super.key});
@@ -35,7 +36,7 @@ class _ProgrammingLangsState extends State<ProgrammingLangs> {
           shrinkWrap: true,
           itemCount: languages.length,
           itemBuilder: (context, index) {
-            return SkillItem(skill: languages[index].name!);
+            return ProgrammingItem(language: languages[index].name!);
           },
         );
       },

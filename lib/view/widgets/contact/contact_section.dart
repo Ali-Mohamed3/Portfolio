@@ -3,8 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
-import 'package:my_portfolio/core/widgets/custom_button.dart';
-import 'package:my_portfolio/view/widgets/contact_widget.dart';
+import 'package:my_portfolio/view/widgets/contact/contact_widget.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
 
 class ContactSection extends StatefulWidget {
