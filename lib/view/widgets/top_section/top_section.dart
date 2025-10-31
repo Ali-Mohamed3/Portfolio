@@ -28,7 +28,7 @@ class _TopSectionState extends State<TopSection> {
             SizedBox(height: 15.h),
             IconsWidget(),
             SizedBox(height: 40.h),
-            CustomButton(text: "Download my CV"),
+            CustomButton(text: "Download my CV", width: 350.w),
           ],
         ),
         PhotoWidget(),

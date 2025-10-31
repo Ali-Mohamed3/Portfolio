@@ -22,7 +22,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        fixedSize: Size(width ?? 215.w, height ?? 52.h),
+        fixedSize: Size(width ?? 270.w, height ?? 52.h),
         backgroundColor: Appcolors.buttonColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(radius ?? 20.r),
@@ -32,7 +32,7 @@ class CustomButton extends StatelessWidget {
       ),
 
       onPressed: ontap ?? () {},
-      child: Text(text!, style: Appstyles.primary.copyWith(fontSize: 19.sp)),
+      child: Text(text!, style: Appstyles.primary.copyWith(fontSize: 30.sp)),
     );
   }
 }

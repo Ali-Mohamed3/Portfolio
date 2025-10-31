@@ -9,6 +9,7 @@ class CustomTextField extends StatelessWidget {
   final Widget? suffixIcon;
   final double? width;
   final double? height;
+  final double? hintTextSized;
   final bool? isPassword;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
@@ -21,6 +22,7 @@ class CustomTextField extends StatelessWidget {
     this.controller,
     this.validator,
     this.height,
+    this.hintTextSized,
   });
   @override
   Widget build(BuildContext context) {
@@ -41,7 +43,7 @@ class CustomTextField extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hintText ?? "",
           hintStyle: TextStyle(
-            fontSize: 15.sp,
+            fontSize: hintTextSized ?? 15.sp,
             color: Color(0xff8391A1),
             fontWeight: FontWeight.w400,
           ),

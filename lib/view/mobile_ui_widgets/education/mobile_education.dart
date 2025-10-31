@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_portfolio/controller/firestore_controller/firestore_controller.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
+import 'package:my_portfolio/core/appstyles/appstyles.dart';
+
+class MobileEducation extends StatefulWidget {
+  const MobileEducation({super.key});
+
+  @override
+  State<MobileEducation> createState() => _MobileEducationState();
+}
+
+class _MobileEducationState extends State<MobileEducation> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(20.sp),
+
+      decoration: BoxDecoration(
+        color: Appcolors.secondary,
+        borderRadius: BorderRadius.circular(15.r),
+        border: Border.all(width: 1.w, color: Colors.white),
+      ),
+      child: StreamBuilder(
+        stream: FirestoreController().getEducation(),
+
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return CircularProgressIndicator(color: Colors.white);
+          }
+          if (snapshot.hasError) {
+            return Text("Error occured");
+          }
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(snapshot.data!.university, style: Appstyles.secondary),
+              SizedBox(height: 10.h),
+              Text(snapshot.data!.faculty, style: Appstyles.secondary),
+              SizedBox(height: 10.h),
+              Text(snapshot.data!.speciality, style: Appstyles.secondary),
+              SizedBox(height: 10.h),
+            ],
+          );
+        },
+      ),
+    );
+  }
+}

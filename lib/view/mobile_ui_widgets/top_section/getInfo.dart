@@ -3,14 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/controller/firestore_controller/firestore_controller.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 
-class Getinfo extends StatefulWidget {
-  const Getinfo({super.key});
+class MobileGetInfo extends StatefulWidget {
+  const MobileGetInfo({super.key});
 
   @override
-  State<Getinfo> createState() => _GetinfoState();
+  State<MobileGetInfo> createState() => _MobileGetInfoState();
 }
 
-class _GetinfoState extends State<Getinfo> {
+class _MobileGetInfoState extends State<MobileGetInfo> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
@@ -22,11 +22,14 @@ class _GetinfoState extends State<Getinfo> {
         if (snapshot.hasError) {
           return Text("An error occured");
         }
-        return SizedBox(
-          width: 800.w,
-          child: Text(
-            snapshot.data!.info.toString(),
-            style: Appstyles.secondary.copyWith(fontSize: 22.sp),
+        return Align(
+          alignment: Alignment.center,
+          child: SizedBox(
+            width: 500.w,
+            child: Text(
+              snapshot.data!.info.toString(),
+              style: Appstyles.secondary.copyWith(fontSize: 25.sp),
+            ),
           ),
         );
       },

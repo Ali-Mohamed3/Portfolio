@@ -4,14 +4,14 @@ import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class IconsWidget extends StatefulWidget {
-  const IconsWidget({super.key});
+class MobileIconsWidget extends StatefulWidget {
+  const MobileIconsWidget({super.key});
 
   @override
-  State<IconsWidget> createState() => _IconsState();
+  State<MobileIconsWidget> createState() => _IconsState();
 }
 
-class _IconsState extends State<IconsWidget> {
+class _IconsState extends State<MobileIconsWidget> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -30,8 +30,8 @@ class _IconsState extends State<IconsWidget> {
           },
           child: SvgPicture.asset(
             AppAssets.linkedIn,
-            width: 40.w,
-            height: 40.h,
+            width: 50.w,
+            height: 50.h,
           ),
         ),
         SizedBox(width: 20.w),
@@ -46,8 +46,8 @@ class _IconsState extends State<IconsWidget> {
           },
           child: SvgPicture.asset(
             AppAssets.gitHub,
-            width: 40.w,
-            height: 40.h,
+            width: 50.w,
+            height: 50.h,
             color: Color(0xff25F0FB),
           ),
         ),
@@ -64,8 +64,8 @@ class _IconsState extends State<IconsWidget> {
           },
           child: SvgPicture.asset(
             AppAssets.whatsApp,
-            width: 40.w,
-            height: 40.h,
+            width: 50.w,
+            height: 50.h,
           ),
         ),
         SizedBox(width: 20.w),
@@ -78,7 +78,7 @@ class _IconsState extends State<IconsWidget> {
               throw "couldn't launch url";
             }
           },
-          child: Image.asset(AppAssets.codeForces, width: 30.w, height: 30.h),
+          child: Image.asset(AppAssets.codeForces, width: 50.w, height: 50.h),
         ),
       ],
     );

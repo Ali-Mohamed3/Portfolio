@@ -24,9 +24,9 @@ class SkillItem extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 10.h),
-              SvgPicture.asset(AppAssets.bulb, width: 50.w, height: 50.h),
+              SvgPicture.asset(AppAssets.bulb, width: 70.w, height: 70.h),
               SizedBox(height: 20.h),
-              Text(skill, style: Appstyles.secondary.copyWith(fontSize: 25.sp)),
+              Text(skill, style: Appstyles.secondary),
               SizedBox(height: 10.h),
             ],
           ),
