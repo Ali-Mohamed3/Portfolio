@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/controller/firestore_controller/firestore_controller.dart';
+import 'package:my_portfolio/core/di/di.dart';
 import 'package:my_portfolio/models/programming_langs.dart' as model;
 import 'package:my_portfolio/view/mobile_ui_widgets/programming_languages/mobile_programming_item.dart';
 import 'package:my_portfolio/view/widgets/programming_languages/programming_item.dart';
@@ -19,7 +20,7 @@ class _MobileProgrammingILangsState extends State<MobileProgrammingILangs> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: FirestoreController().getLangs(),
+      stream: sl<FirestoreController>().getLangs(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return CircularProgressIndicator(color: Colors.white);

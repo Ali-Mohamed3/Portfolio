@@ -12,7 +12,7 @@ class CertificateItem extends StatelessWidget {
       height: 400.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),
-        image: DecorationImage(image: AssetImage(image), fit: BoxFit.fill),
+        image: DecorationImage(image: NetworkImage(image), fit: BoxFit.fill),
       ),
     );
   }

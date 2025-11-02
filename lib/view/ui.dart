@@ -106,7 +106,7 @@ class _UiState extends State<Ui> {
 
                 SizedBox(height: 150.h),
                 SkillsSection(),
-                SizedBox(height: 200.h),
+                SizedBox(height: 300.h),
                 ProgrammingSection(),
                 SizedBox(height: 150.h),
                 ToolsSection(),

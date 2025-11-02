@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/controller/firestore_controller/firestore_controller.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
+import 'package:my_portfolio/core/di/di.dart';
 
 class MobileGetInfo extends StatefulWidget {
   const MobileGetInfo({super.key});
@@ -14,7 +15,7 @@ class _MobileGetInfoState extends State<MobileGetInfo> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: FirestoreController().getInfo(),
+      stream: sl<FirestoreController>().getInfo(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return CircularProgressIndicator(color: Colors.white);

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/controller/firestore_controller/firestore_controller.dart';
 import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
+import 'package:my_portfolio/core/di/di.dart';
 
 class MobileEducation extends StatefulWidget {
   const MobileEducation({super.key});
@@ -23,7 +24,7 @@ class _MobileEducationState extends State<MobileEducation> {
         border: Border.all(width: 1.w, color: Colors.white),
       ),
       child: StreamBuilder(
-        stream: FirestoreController().getEducation(),
+        stream: sl<FirestoreController>().getEducation(),
 
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {

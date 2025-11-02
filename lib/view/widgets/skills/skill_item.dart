@@ -15,6 +15,7 @@ class SkillItem extends StatelessWidget {
       children: [
         Container(
           alignment: Alignment.center,
+          padding: EdgeInsets.symmetric(horizontal: 50.sp, vertical: 10.sp),
 
           decoration: BoxDecoration(
             color: Appcolors.secondary,
@@ -26,7 +27,7 @@ class SkillItem extends StatelessWidget {
               SizedBox(height: 10.h),
               SvgPicture.asset(AppAssets.bulb, width: 70.w, height: 70.h),
               SizedBox(height: 20.h),
-              Text(skill, style: Appstyles.secondary),
+              Text(skill, style: Appstyles.secondary.copyWith(fontSize: 25.sp)),
               SizedBox(height: 10.h),
             ],
           ),

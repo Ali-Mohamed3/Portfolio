@@ -78,7 +78,19 @@ class _IconsState extends State<IconsWidget> {
               throw "couldn't launch url";
             }
           },
-          child: Image.asset(AppAssets.codeForces, width: 30.w, height: 30.h),
+          child: Image.asset(AppAssets.codeForces, width: 35.w, height: 35.h),
+        ),
+        SizedBox(width: 20.w),
+        InkWell(
+          onTap: () async {
+            final Uri url = Uri.parse("https://leetcode.com/u/_Ali_Mo_/");
+            if (await canLaunchUrl(url)) {
+              await launchUrl(url, mode: LaunchMode.externalApplication);
+            } else {
+              throw "couldn't launch url";
+            }
+          },
+          child: Image.asset(AppAssets.leetCode, width: 35.w, height: 35.h),
         ),
       ],
     );

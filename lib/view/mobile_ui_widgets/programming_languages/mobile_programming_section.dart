@@ -21,7 +21,12 @@ class _MobileProgrammingSectionState extends State<MobileProgrammingSection> {
         ScrollAnimation(
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text("Programming languages", style: Appstyles.primary)],
+            children: [
+              SizedBox(
+                width: 400.w,
+                child: Text("Programming languages", style: Appstyles.primary),
+              ),
+            ],
           ),
           duration: Duration(milliseconds: 750),
         ),

@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/controller/firestore_controller/firestore_controller.dart';
+import 'package:my_portfolio/core/di/di.dart';
 import 'package:my_portfolio/models/certificates.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/certificates/mobile_certificate_item.dart';
 import 'package:my_portfolio/view/widgets/certificates/certificate_item.dart';
@@ -18,7 +19,7 @@ class _MobileCertificatesWidgetState extends State<MobileCertificatesWidget> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: FirestoreController().getCertificates(),
+      stream: sl<FirestoreController>().getCertificates(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return CircularProgressIndicator(color: Colors.white);

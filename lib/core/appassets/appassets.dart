@@ -3,6 +3,7 @@ class AppAssets {
   static const String gitHub = "assets/icons/github-142-svgrepo-com.svg";
   static const String whatsApp = "assets/icons/whatsapp-svgrepo-com.svg";
   static const String codeForces = "assets/images/image.webp";
+  static const String leetCode = "assets/images/leetcode-1.webp";
   static const String info = "assets/icons/user-svgrepo-com.svg";
   static const String rocket = "assets/icons/rocket-svgrepo-com.svg";
   static const String education = "assets/icons/education-svgrepo-com.svg";

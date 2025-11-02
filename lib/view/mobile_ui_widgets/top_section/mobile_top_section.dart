@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
-import 'package:my_portfolio/core/widgets/custom_button.dart';
+import 'package:my_portfolio/view/mobile_ui_widgets/top_section/download_button.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/top_section/getInfo.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/top_section/mobile_icons_widget.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/top_section/mobile_photo_widget.dart';
-import 'package:my_portfolio/view/widgets/top_section/getInfo.dart';
-import 'package:my_portfolio/view/widgets/top_section/photo_widget.dart';
 
 class MobileTopSection extends StatefulWidget {
   const MobileTopSection({super.key});
@@ -29,7 +27,7 @@ class _MobileTopSectionState extends State<MobileTopSection> {
         SizedBox(height: 30.h),
         MobileIconsWidget(),
         SizedBox(height: 40.h),
-        CustomButton(text: "Download my CV", width: 350.w, height: 70.h),
+        DownloadButton(text: "Download my CV", width: 350.w, height: 70.h),
       ],
     );
   }

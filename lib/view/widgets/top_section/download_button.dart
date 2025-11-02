@@ -3,21 +3,25 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 
-class CustomButton extends StatelessWidget {
+import 'package:url_launcher/url_launcher.dart';
+
+class DownloadButton extends StatelessWidget {
   final double? width;
   final double? height;
   final String? text;
   final double? radius;
   final void Function()? ontap;
-  final Color? color;
-  const CustomButton({
+  final String? url;
+  final String? fileName;
+  const DownloadButton({
     super.key,
     this.height,
     this.width,
     this.text,
     this.radius,
     this.ontap,
-    this.color,
+    this.fileName,
+    this.url,
   });
 
   @override
@@ -25,7 +29,7 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         fixedSize: Size(width ?? 270.w, height ?? 52.h),
-        backgroundColor: color ?? Appcolors.buttonColor,
+        backgroundColor: Appcolors.buttonColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(radius ?? 20.r),
         ),
@@ -33,7 +37,16 @@ class CustomButton extends StatelessWidget {
         side: BorderSide(width: 1.sp, color: Colors.white),
       ),
 
-      onPressed: ontap ?? () {},
+      onPressed: () async {
+        final Uri url = Uri.parse(
+          "https://drive.google.com/file/d/1Lq-g8kzQ9BTSqaf80nSAxNSlMdtpK0ri/view?usp=drive_link",
+        );
+        if (await canLaunchUrl(url)) {
+          await launchUrl(url, mode: LaunchMode.externalApplication);
+        } else {
+          throw "couldn't launch url";
+        }
+      },
       child: Text(text!, style: Appstyles.primary.copyWith(fontSize: 25.sp)),
     );
   }

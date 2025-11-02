@@ -17,7 +17,7 @@ class MobileSkillItem extends StatelessWidget {
         children: [
           Container(
             alignment: Alignment.center,
-
+            padding: EdgeInsets.symmetric(horizontal: 50.sp, vertical: 10.sp),
             decoration: BoxDecoration(
               color: Appcolors.secondary,
               borderRadius: BorderRadius.circular(50.r),
