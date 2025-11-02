@@ -1,9 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/widgets.dart';
 import 'package:my_portfolio/models/certificates.dart';
 import 'package:my_portfolio/models/contact.dart';
 import 'package:my_portfolio/models/cv.dart';
 import 'package:my_portfolio/models/description.dart';
 import 'package:my_portfolio/models/education.dart';
+import 'package:my_portfolio/models/image.dart';
 import 'package:my_portfolio/models/info.dart';
 import 'package:my_portfolio/models/programming_langs.dart';
 import 'package:my_portfolio/models/projects.dart';
@@ -27,6 +29,12 @@ class FirestoreController {
   Stream<Info> getInfo() {
     return db.collection('info').snapshots().map((snapshot) {
       return Info.fromJson(snapshot.docs.first.data());
+    });
+  }
+
+  Stream<ImageModel> getProfileImage() {
+    return db.collection('profile image').snapshots().map((snapshot) {
+      return ImageModel.fromMap(snapshot.docs.first.data());
     });
   }
 

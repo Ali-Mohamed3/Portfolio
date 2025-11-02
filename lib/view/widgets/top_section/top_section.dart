@@ -5,6 +5,7 @@ import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/core/di/di.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
 import 'package:my_portfolio/models/cv.dart';
+import 'package:my_portfolio/models/image.dart';
 import 'package:my_portfolio/view/widgets/top_section/download_button.dart';
 import 'package:my_portfolio/view/widgets/top_section/getInfo.dart';
 import 'package:my_portfolio/view/widgets/top_section/icons_widget.dart';
@@ -52,7 +53,22 @@ class _TopSectionState extends State<TopSection> {
             ),
           ],
         ),
-        PhotoWidget(),
+        StreamBuilder(
+          stream: sl<FirestoreController>().getProfileImage(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return CircularProgressIndicator(color: Colors.white);
+            }
+            if (snapshot.hasError) {
+              return Text(
+                snapshot.error.toString(),
+                style: TextStyle(color: Colors.white),
+              );
+            }
+            ImageModel image = snapshot.data!;
+            return PhotoWidget(url: image.image);
+          },
+        ),
       ],
     );
   }

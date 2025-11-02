@@ -28,8 +28,7 @@ class MobileProgrammingItem extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(width: 10.w),
-            Icon(Icons.arrow_forward, size: 30.sp, color: Colors.white),
-            SizedBox(width: 10.w),
+
             Text(language, style: Appstyles.secondary),
           ],
         ),

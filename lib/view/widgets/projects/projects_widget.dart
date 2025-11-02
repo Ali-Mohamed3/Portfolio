@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/controller/firestore_controller/firestore_controller.dart';
 import 'package:my_portfolio/core/di/di.dart';
 import 'package:my_portfolio/models/projects.dart';
-import 'package:my_portfolio/view/widgets/projects/details_item.dart';
+import 'package:my_portfolio/view/widgets/projects/details_screen.dart';
 import 'package:my_portfolio/view/widgets/projects/project_item.dart';
 
 class ProjectsWidget extends StatefulWidget {
