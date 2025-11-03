@@ -88,7 +88,23 @@ class _ContactWidgetState extends State<ContactWidget> {
                           .then((DocumentReference doc) {
                             return print("doc.id");
                           });
-                      showCustomDialogue(context);
+                      if (isValid(email.text)) {
+                        showCustomDialogue(
+                          context,
+                          "Thanks for contacting me",
+                          Icon(
+                            Icons.check_circle,
+                            color: Colors.green,
+                            size: 60.sp,
+                          ),
+                        );
+                      } else {
+                        showCustomDialogue(
+                          context,
+                          "Email is invalid",
+                          Icon(Icons.error, color: Colors.red, size: 60.sp),
+                        );
+                      }
                       email.clear();
                       message.clear();
                     }
@@ -103,7 +119,12 @@ class _ContactWidgetState extends State<ContactWidget> {
   }
 }
 
-void showCustomDialogue(BuildContext context1) {
+bool isValid(String email) {
+  final regex = RegExp(r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$');
+  return regex.hasMatch(email);
+}
+
+void showCustomDialogue(BuildContext context1, String text, Icon icon) {
   showDialog(
     context: context1,
     builder: (BuildContext context) {
@@ -122,12 +143,9 @@ void showCustomDialogue(BuildContext context1) {
           padding: EdgeInsets.all(MediaQuery.sizeOf(context).width * .02),
           child: Column(
             children: [
-              Icon(Icons.check_circle, color: Colors.green, size: 60.sp),
+              icon,
               SizedBox(height: 50.h),
-              Text(
-                "Thanks for contacting me",
-                style: Appstyles.secondary.copyWith(fontSize: 30.sp),
-              ),
+              Text(text, style: Appstyles.secondary.copyWith(fontSize: 30.sp)),
               SizedBox(height: 200.h),
               CustomButton(
                 height: 50.h,
