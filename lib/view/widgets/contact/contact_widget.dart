@@ -78,16 +78,6 @@ class _ContactWidgetState extends State<ContactWidget> {
                   radius: 50,
                   ontap: () {
                     if (formKey.currentState!.validate()) {
-                      Map<String, dynamic> data = {
-                        'email': email.text,
-                        'message': message.text,
-                      };
-                      sl<FirestoreController>().db
-                          .collection('contact')
-                          .add(data)
-                          .then((DocumentReference doc) {
-                            return print("doc.id");
-                          });
                       if (isValid(email.text)) {
                         showCustomDialogue(
                           context,
@@ -98,6 +88,13 @@ class _ContactWidgetState extends State<ContactWidget> {
                             size: 60.sp,
                           ),
                         );
+                        Map<String, dynamic> data = {
+                          'email': email.text,
+                          'message': message.text,
+                        };
+                        sl<FirestoreController>().db
+                            .collection('contact')
+                            .add(data);
                       } else {
                         showCustomDialogue(
                           context,
@@ -145,7 +142,10 @@ void showCustomDialogue(BuildContext context1, String text, Icon icon) {
             children: [
               icon,
               SizedBox(height: 50.h),
-              Text(text, style: Appstyles.secondary.copyWith(fontSize: 30.sp)),
+              SelectableText(
+                text,
+                style: Appstyles.secondary.copyWith(fontSize: 30.sp),
+              ),
               SizedBox(height: 200.h),
               CustomButton(
                 height: 50.h,

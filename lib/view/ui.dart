@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
+import 'package:my_portfolio/core/widgets/cursor_animation.dart';
 import 'package:my_portfolio/view/widgets/about_me/about_me_section.dart';
 import 'package:my_portfolio/view/widgets/bottom_section/bottom_section.dart';
 import 'package:my_portfolio/view/widgets/certificates/certificates_section.dart';
@@ -51,38 +52,46 @@ class _UiState extends State<Ui> {
         backgroundColor: Color(0xff041112),
         actionsPadding: EdgeInsets.only(left: 100.w),
         actions: [
-          TextButton(
-            onPressed: () {
-              _scrollController.animateTo(
-                0,
-                duration: const Duration(milliseconds: 1500),
-                curve: Curves.easeOut,
-              );
-            },
-            child: Text(
-              "Home",
-              style: Appstyles.primary.copyWith(fontSize: 30.sp),
+          CursorAnimation(
+            childW: TextButton(
+              onPressed: () {
+                _scrollController.animateTo(
+                  0,
+                  duration: const Duration(milliseconds: 1500),
+                  curve: Curves.easeOut,
+                );
+              },
+              child: Text(
+                "Home",
+                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+              ),
             ),
           ),
-          TextButton(
-            onPressed: () => scrollToSection(aboutKey),
-            child: Text(
-              "About",
-              style: Appstyles.primary.copyWith(fontSize: 30.sp),
+          CursorAnimation(
+            childW: TextButton(
+              onPressed: () => scrollToSection(aboutKey),
+              child: Text(
+                "About",
+                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+              ),
             ),
           ),
-          TextButton(
-            onPressed: () => scrollToSection(projectsKey),
-            child: Text(
-              "Projects",
-              style: Appstyles.primary.copyWith(fontSize: 30.sp),
+          CursorAnimation(
+            childW: TextButton(
+              onPressed: () => scrollToSection(projectsKey),
+              child: Text(
+                "Projects",
+                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+              ),
             ),
           ),
-          TextButton(
-            onPressed: () => scrollToSection(contactKey),
-            child: Text(
-              "Contact",
-              style: Appstyles.primary.copyWith(fontSize: 30.sp),
+          CursorAnimation(
+            childW: TextButton(
+              onPressed: () => scrollToSection(contactKey),
+              child: Text(
+                "Contact",
+                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+              ),
             ),
           ),
         ],

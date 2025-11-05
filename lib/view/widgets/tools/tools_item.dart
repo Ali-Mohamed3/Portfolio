@@ -26,7 +26,10 @@ class ToolsItem extends StatelessWidget {
         children: [
           SizedBox(width: 10.w),
 
-          Text(tool, style: Appstyles.secondary.copyWith(fontSize: 25.sp)),
+          SelectableText(
+            tool,
+            style: Appstyles.secondary.copyWith(fontSize: 25.sp),
+          ),
         ],
       ),
     );

@@ -27,7 +27,7 @@ class _TopSectionState extends State<TopSection> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Ali Mohamed Ali", style: Appstyles.primary),
+            SelectableText("Ali Mohamed Ali", style: Appstyles.primary),
             SizedBox(height: 10.h),
             Getinfo(),
             SizedBox(height: 15.h),
@@ -40,7 +40,7 @@ class _TopSectionState extends State<TopSection> {
                   return CircularProgressIndicator(color: Colors.white);
                 }
                 if (snapshot.hasError) {
-                  return Text("Error occurred");
+                  return SelectableText("Error occurred");
                 }
                 Cv cv = snapshot.data!;
                 return DownloadButton(
@@ -60,7 +60,7 @@ class _TopSectionState extends State<TopSection> {
               return CircularProgressIndicator(color: Colors.white);
             }
             if (snapshot.hasError) {
-              return Text(
+              return SelectableText(
                 snapshot.error.toString(),
                 style: TextStyle(color: Colors.white),
               );

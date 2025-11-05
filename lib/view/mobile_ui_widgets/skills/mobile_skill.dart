@@ -24,7 +24,7 @@ class _MobileSkillState extends State<MobileSkill> {
           return CircularProgressIndicator(color: Colors.white);
         }
         if (snapshot.hasError) {
-          return Text("Error occured");
+          return SelectableText("Error occured");
         }
         List<Skills> skills = snapshot.data!;
         return ListView.builder(

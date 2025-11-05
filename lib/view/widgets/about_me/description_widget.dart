@@ -31,9 +31,9 @@ class _DescriptionWidgetState extends State<DescriptionWidget> {
             return CircularProgressIndicator(color: Colors.white);
           }
           if (snapshot.hasError) {
-            return Text("Error occured");
+            return SelectableText("Error occured");
           }
-          return Text(
+          return SelectableText(
             snapshot.data!.name!,
             style: Appstyles.secondary.copyWith(fontSize: 25.sp),
           );

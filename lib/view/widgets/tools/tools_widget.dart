@@ -22,7 +22,7 @@ class _ToolsWidgetState extends State<ToolsWidget> {
           return CircularProgressIndicator(color: Colors.white);
         }
         if (snapshot.hasError) {
-          return Text("Error occured");
+          return SelectableText("Error occured");
         }
         List<ToolsApps> tools = snapshot.data!;
         return GridView.builder(

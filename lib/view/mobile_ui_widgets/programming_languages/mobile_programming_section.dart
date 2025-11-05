@@ -24,7 +24,10 @@ class _MobileProgrammingSectionState extends State<MobileProgrammingSection> {
             children: [
               SizedBox(
                 width: 400.w,
-                child: Text("Programming languages", style: Appstyles.primary),
+                child: SelectableText(
+                  "Programming languages",
+                  style: Appstyles.primary,
+                ),
               ),
             ],
           ),

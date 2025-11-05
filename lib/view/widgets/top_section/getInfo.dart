@@ -21,11 +21,11 @@ class _GetinfoState extends State<Getinfo> {
           return CircularProgressIndicator(color: Colors.white);
         }
         if (snapshot.hasError) {
-          return Text("An error occured");
+          return SelectableText("An error occured");
         }
         return SizedBox(
           width: 800.w,
-          child: Text(
+          child: SelectableText(
             snapshot.data!.info.toString(),
             style: Appstyles.secondary.copyWith(fontSize: 22.sp),
           ),

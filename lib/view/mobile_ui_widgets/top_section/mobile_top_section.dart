@@ -21,7 +21,7 @@ class _MobileTopSectionState extends State<MobileTopSection> {
       children: [
         MobilePhotoWidget(),
         SizedBox(height: 20.h),
-        Text("Ali Mohamed Ali", style: Appstyles.primary),
+        SelectableText("Ali Mohamed Ali", style: Appstyles.primary),
         SizedBox(height: 20.h),
         MobileGetInfo(),
         SizedBox(height: 30.h),

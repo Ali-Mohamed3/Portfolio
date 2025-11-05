@@ -53,7 +53,7 @@ class ProjectItem extends StatelessWidget {
           ),
           SizedBox(height: 30.h),
           Center(
-            child: Text(
+            child: SelectableText(
               name,
               style: Appstyles.primary.copyWith(fontSize: 30.sp),
             ),

@@ -26,7 +26,7 @@ class _MobileProgrammingILangsState extends State<MobileProgrammingILangs> {
           return CircularProgressIndicator(color: Colors.white);
         }
         if (snapshot.hasError) {
-          return Text("Error occured");
+          return SelectableText("Error occured");
         }
         List<model.ProgrammingLangs> languages = snapshot.data!;
         return ListView.builder(

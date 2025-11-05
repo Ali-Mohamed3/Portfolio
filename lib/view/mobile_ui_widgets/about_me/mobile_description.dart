@@ -31,9 +31,12 @@ class _MobileDescriptionState extends State<MobileDescription> {
             return CircularProgressIndicator(color: Colors.white);
           }
           if (snapshot.hasError) {
-            return Text("Error occured");
+            return SelectableText("Error occured");
           }
-          return Text(snapshot.data!.name!, style: Appstyles.secondary);
+          return SelectableText(
+            snapshot.data!.name!,
+            style: Appstyles.secondary,
+          );
         },
       ),
     );

@@ -19,7 +19,9 @@ class _ProgrammingSectionState extends State<ProgrammingSection> {
         ScrollAnimation(
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text("Programming languages", style: Appstyles.primary)],
+            children: [
+              SelectableText("Programming languages", style: Appstyles.primary),
+            ],
           ),
           duration: Duration(milliseconds: 750),
         ),

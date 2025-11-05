@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BottomSection extends StatefulWidget {
   const BottomSection({super.key});
@@ -29,7 +30,7 @@ class _BottomSectionState extends State<BottomSection> {
               ),
 
               SizedBox(width: 5.w),
-              Text(
+              SelectableText(
                 "2025",
                 style: Appstyles.secondary.copyWith(
                   color: Color(0xff247D87),
@@ -37,16 +38,26 @@ class _BottomSectionState extends State<BottomSection> {
                 ),
               ),
               SizedBox(width: 5.w),
-              Text(
+              SelectableText(
                 "Made by",
                 style: Appstyles.primary.copyWith(fontSize: 20.sp),
               ),
               SizedBox(width: 5.w),
-              Text(
-                "Ali Mohamed Ali",
-                style: Appstyles.primary.copyWith(
-                  color: Color(0xff9573D9),
-                  fontSize: 20.sp,
+              InkWell(
+                onTap: () async {
+                  final Uri url = Uri.parse(
+                    "https://www.linkedin.com/in/ali-mohamed-2299b4326/",
+                  );
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url, mode: LaunchMode.externalApplication);
+                  }
+                },
+                child: Text(
+                  "Ali Mohamed Ali",
+                  style: Appstyles.primary.copyWith(
+                    color: Color(0xff9573D9),
+                    fontSize: 20.sp,
+                  ),
                 ),
               ),
             ],

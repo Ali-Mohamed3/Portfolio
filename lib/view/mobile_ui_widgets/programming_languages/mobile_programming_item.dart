@@ -29,7 +29,7 @@ class MobileProgrammingItem extends StatelessWidget {
           children: [
             SizedBox(width: 10.w),
 
-            Text(language, style: Appstyles.secondary),
+            SelectableText(language, style: Appstyles.secondary),
           ],
         ),
       ),

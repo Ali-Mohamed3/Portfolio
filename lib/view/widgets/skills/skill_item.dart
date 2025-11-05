@@ -27,7 +27,10 @@ class SkillItem extends StatelessWidget {
               SizedBox(height: 10.h),
               SvgPicture.asset(AppAssets.bulb, width: 70.w, height: 70.h),
               SizedBox(height: 20.h),
-              Text(skill, style: Appstyles.secondary.copyWith(fontSize: 25.sp)),
+              SelectableText(
+                skill,
+                style: Appstyles.secondary.copyWith(fontSize: 25.sp),
+              ),
               SizedBox(height: 10.h),
             ],
           ),

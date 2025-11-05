@@ -20,7 +20,7 @@ class _MobileToolsSectionState extends State<MobileToolsSection> {
         ScrollAnimation(
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text("Tools", style: Appstyles.primary)],
+            children: [SelectableText("Tools", style: Appstyles.primary)],
           ),
           duration: Duration(milliseconds: 750),
         ),

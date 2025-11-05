@@ -22,7 +22,7 @@ class _EducationSectionState extends State<EducationSection> {
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Education", style: Appstyles.primary),
+              SelectableText("Education", style: Appstyles.primary),
               SizedBox(width: 16.w),
               SvgPicture.asset(
                 AppAssets.education,

@@ -21,7 +21,9 @@ class _MobileCertificatesSectionState extends State<MobileCertificatesSection> {
         ScrollAnimation(
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text("Certificates", style: Appstyles.primary)],
+            children: [
+              SelectableText("Certificates", style: Appstyles.primary),
+            ],
           ),
           duration: Duration(milliseconds: 750),
         ),
