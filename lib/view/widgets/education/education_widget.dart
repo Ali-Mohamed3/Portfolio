@@ -31,22 +31,22 @@ class _EducationWidgetState extends State<EducationWidget> {
             return CircularProgressIndicator(color: Colors.white);
           }
           if (snapshot.hasError) {
-            return Text("Error occured");
+            return SelectableText("Error occured");
           }
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              SelectableText(
                 snapshot.data!.university,
                 style: Appstyles.secondary.copyWith(fontSize: 25.sp),
               ),
               SizedBox(height: 10.h),
-              Text(
+              SelectableText(
                 snapshot.data!.faculty,
                 style: Appstyles.secondary.copyWith(fontSize: 25.sp),
               ),
               SizedBox(height: 10.h),
-              Text(
+              SelectableText(
                 snapshot.data!.speciality,
                 style: Appstyles.secondary.copyWith(fontSize: 25.sp),
               ),

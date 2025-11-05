@@ -25,7 +25,7 @@ class _MobileProjectsWidgetsState extends State<MobileProjectsWidgets> {
           return CircularProgressIndicator(color: Colors.white);
         }
         if (snapshot.hasError) {
-          return Text("Error Occured");
+          return SelectableText("Error Occured");
         }
         List<Projects> projects = snapshot.data!;
         return CarouselSlider(

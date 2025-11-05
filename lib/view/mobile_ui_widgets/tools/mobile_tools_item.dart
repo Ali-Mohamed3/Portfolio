@@ -28,7 +28,7 @@ class MobileToolsItem extends StatelessWidget {
           children: [
             SizedBox(width: 10.w),
 
-            Text(tool, style: Appstyles.secondary),
+            SelectableText(tool, style: Appstyles.secondary),
           ],
         ),
       ),

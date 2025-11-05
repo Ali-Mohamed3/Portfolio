@@ -23,7 +23,7 @@ class _MobileToolsWidgetState extends State<MobileToolsWidget> {
           return CircularProgressIndicator(color: Colors.white);
         }
         if (snapshot.hasError) {
-          return Text("Error occured");
+          return SelectableText("Error occured");
         }
         List<ToolsApps> tools = snapshot.data!;
         return ListView.builder(

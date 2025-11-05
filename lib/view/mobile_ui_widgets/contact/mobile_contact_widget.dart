@@ -126,7 +126,7 @@ void showCustomDialogue(BuildContext context1) {
             children: [
               Icon(Icons.check_circle, color: Colors.green, size: 60.sp),
               SizedBox(height: 50.h),
-              Text(
+              SelectableText(
                 "Thanks for contacting me",
                 style: Appstyles.secondary.copyWith(fontSize: 30.sp),
               ),

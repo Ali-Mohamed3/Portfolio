@@ -23,7 +23,7 @@ class _ProgrammingLangsState extends State<ProgrammingLangs> {
           return CircularProgressIndicator(color: Colors.white);
         }
         if (snapshot.hasError) {
-          return Text("Error occured");
+          return SelectableText("Error occured");
         }
         List<model.ProgrammingLangs> languages = snapshot.data!;
         return GridView.builder(

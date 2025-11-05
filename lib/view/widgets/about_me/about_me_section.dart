@@ -22,7 +22,7 @@ class _AboutMeSectionState extends State<AboutMeSection> {
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("About Me", style: Appstyles.primary),
+              SelectableText("About Me", style: Appstyles.primary),
               SizedBox(width: 16.w),
               SvgPicture.asset(
                 AppAssets.info,

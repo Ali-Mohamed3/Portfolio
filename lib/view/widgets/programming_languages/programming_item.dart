@@ -27,7 +27,10 @@ class ProgrammingItem extends StatelessWidget {
         children: [
           SizedBox(width: 10.w),
 
-          Text(language, style: Appstyles.secondary.copyWith(fontSize: 25.sp)),
+          SelectableText(
+            language,
+            style: Appstyles.secondary.copyWith(fontSize: 25.sp),
+          ),
         ],
       ),
     );

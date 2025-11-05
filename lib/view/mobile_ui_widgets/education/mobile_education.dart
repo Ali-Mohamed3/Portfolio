@@ -31,16 +31,25 @@ class _MobileEducationState extends State<MobileEducation> {
             return CircularProgressIndicator(color: Colors.white);
           }
           if (snapshot.hasError) {
-            return Text("Error occured");
+            return SelectableText("Error occured");
           }
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(snapshot.data!.university, style: Appstyles.secondary),
+              SelectableText(
+                snapshot.data!.university,
+                style: Appstyles.secondary,
+              ),
               SizedBox(height: 10.h),
-              Text(snapshot.data!.faculty, style: Appstyles.secondary),
+              SelectableText(
+                snapshot.data!.faculty,
+                style: Appstyles.secondary,
+              ),
               SizedBox(height: 10.h),
-              Text(snapshot.data!.speciality, style: Appstyles.secondary),
+              SelectableText(
+                snapshot.data!.speciality,
+                style: Appstyles.secondary,
+              ),
               SizedBox(height: 10.h),
             ],
           );

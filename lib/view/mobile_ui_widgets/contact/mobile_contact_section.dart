@@ -22,7 +22,7 @@ class _MobileContactSectionState extends State<MobileContactSection> {
         ScrollAnimation(
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text("Contact me", style: Appstyles.primary)],
+            children: [SelectableText("Contact me", style: Appstyles.primary)],
           ),
           duration: Duration(milliseconds: 750),
         ),

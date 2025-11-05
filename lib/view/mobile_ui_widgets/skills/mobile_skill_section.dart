@@ -23,7 +23,7 @@ class _MobileSkillSectionState extends State<MobileSkillSection> {
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Skills", style: Appstyles.primary),
+              SelectableText("Skills", style: Appstyles.primary),
               SizedBox(width: 16.w),
               SvgPicture.asset(
                 AppAssets.rocket,
