@@ -39,7 +39,7 @@ class DownloadButton extends StatelessWidget {
 
       onPressed: () async {
         final Uri url = Uri.parse(
-          "https://drive.google.com/file/d/1Lq-g8kzQ9BTSqaf80nSAxNSlMdtpK0ri/view?usp=drive_link",
+          "https://drive.google.com/drive/folders/15UUruEzRgGJKAXHvEto0yFdKuRNv1h4z?usp=drive_link",
         );
         if (await canLaunchUrl(url)) {
           await launchUrl(url, mode: LaunchMode.externalApplication);
