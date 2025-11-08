@@ -26,7 +26,7 @@ class _MobileProgrammingSectionState extends State<MobileProgrammingSection> {
                 width: 400.w,
                 child: SelectableText(
                   "Programming languages",
-                  style: Appstyles.primary,
+                  style: Appstyles.primary.copyWith(fontSize: 30.sp),
                 ),
               ),
             ],

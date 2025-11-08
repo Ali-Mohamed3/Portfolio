@@ -23,12 +23,15 @@ class _MobileAboutMeSectionState extends State<MobileAboutMeSection> {
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SelectableText("About Me", style: Appstyles.primary),
+              SelectableText(
+                "About Me",
+                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+              ),
               SizedBox(width: 16.w),
               SvgPicture.asset(
                 AppAssets.info,
-                width: 50.w,
-                height: 50.h,
+                width: 40.w,
+                height: 40.h,
                 color: Colors.white,
               ),
             ],

@@ -23,12 +23,15 @@ class _MobileEducationSectionState extends State<MobileEducationSection> {
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SelectableText("Education", style: Appstyles.primary),
+              SelectableText(
+                "Education",
+                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+              ),
               SizedBox(width: 16.w),
               SvgPicture.asset(
                 AppAssets.education,
-                width: 50.w,
-                height: 50.h,
+                width: 40.w,
+                height: 40.h,
                 color: Colors.white,
               ),
             ],

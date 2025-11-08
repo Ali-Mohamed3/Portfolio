@@ -30,11 +30,11 @@ class _MobileCertificatesWidgetState extends State<MobileCertificatesWidget> {
         List<Certificates> certificates = snapshot.data!;
         return CarouselSlider(
           options: CarouselOptions(
-            height: 300.h,
+            height: 400.h,
             viewportFraction: 1,
             enableInfiniteScroll: false,
             autoPlay: true,
-            autoPlayInterval: Duration(seconds: 4),
+            autoPlayInterval: Duration(seconds: 10),
           ),
           items: certificates.map((x) {
             return MobileCertificateItem(image: x.image!);

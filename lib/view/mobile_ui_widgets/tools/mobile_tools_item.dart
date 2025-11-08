@@ -10,7 +10,7 @@ class MobileToolsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(30.0.sp),
+      padding: EdgeInsets.all(12.0.sp),
       child: Container(
         width: 100.w,
         height: 73.h,
@@ -28,7 +28,10 @@ class MobileToolsItem extends StatelessWidget {
           children: [
             SizedBox(width: 10.w),
 
-            SelectableText(tool, style: Appstyles.secondary),
+            SelectableText(
+              tool,
+              style: Appstyles.secondary.copyWith(fontSize: 20.sp),
+            ),
           ],
         ),
       ),

@@ -30,7 +30,7 @@ class CustomTextField extends StatelessWidget {
       width: width,
       height: height,
       child: TextFormField(
-        maxLines: 10,
+        maxLines: 15,
         textAlignVertical: TextAlignVertical.center,
         controller: controller,
         validator: validator,
@@ -48,19 +48,19 @@ class CustomTextField extends StatelessWidget {
             fontWeight: FontWeight.w400,
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(15.r),
             borderSide: BorderSide(color: Color(0xffE8ECF4), width: 1),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(15.r),
             borderSide: BorderSide(color: Colors.white, width: 1),
           ),
           errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(15.r),
             borderSide: BorderSide(color: Colors.white, width: 1),
           ),
           focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(15.r),
             borderSide: BorderSide(color: Colors.white, width: 1),
           ),
           filled: true,

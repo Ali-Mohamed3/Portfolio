@@ -30,7 +30,7 @@ class _MobileProjectsWidgetsState extends State<MobileProjectsWidgets> {
         List<Projects> projects = snapshot.data!;
         return CarouselSlider(
           options: CarouselOptions(
-            height: 540.0.h,
+            height: 570.0.h,
             viewportFraction: 1,
             enableInfiniteScroll: false,
             autoPlay: true,

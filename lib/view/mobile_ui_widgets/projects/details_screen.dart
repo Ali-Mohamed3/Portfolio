@@ -71,7 +71,7 @@ class DetailsScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 30.h),
                 Center(
-                  child: SelectableText(
+                  child: Text(
                     name,
                     style: Appstyles.primary.copyWith(color: Colors.lightBlue),
                   ),

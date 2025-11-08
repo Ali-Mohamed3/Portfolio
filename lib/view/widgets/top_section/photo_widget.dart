@@ -12,7 +12,6 @@ class PhotoWidget extends StatelessWidget {
       height: 500.h,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        border: Border.all(width: 1.sp, color: Colors.white),
         image: DecorationImage(image: NetworkImage(url), fit: BoxFit.fill),
         boxShadow: [
           BoxShadow(color: Colors.white, blurRadius: 20, spreadRadius: 5),
