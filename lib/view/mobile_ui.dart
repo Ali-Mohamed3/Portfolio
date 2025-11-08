@@ -25,70 +25,23 @@ class MobileUi extends StatefulWidget {
 
 class _MobileUiState extends State<MobileUi> {
   @override
-  final ScrollController _scrollController = ScrollController();
-
-  final homeKey = GlobalKey();
-  final aboutKey = GlobalKey();
-  final projectsKey = GlobalKey();
-  final contactKey = GlobalKey();
-
-  void scrollToSection(GlobalKey key) {
-    final context = key.currentContext;
-    if (context != null) {
-      Scrollable.ensureVisible(
-        context,
-        duration: const Duration(milliseconds: 1500),
-        curve: Curves.easeOut,
-      );
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff041112),
       appBar: AppBar(
         backgroundColor: Color(0xff041112),
-        actions: [
-          TextButton(
-            onPressed: () {
-              _scrollController.animateTo(
-                0,
-                duration: const Duration(milliseconds: 1500),
-                curve: Curves.easeOut,
-              );
-            },
-            child: Text(
-              "Home",
-              style: Appstyles.primary.copyWith(fontSize: 25.sp),
-            ),
+        title: Text(
+          "Ali Mohamed Ali",
+          style: Appstyles.primary.copyWith(
+            color: Colors.redAccent,
+            fontSize: 40.sp,
           ),
-          TextButton(
-            onPressed: () => scrollToSection(aboutKey),
-            child: Text(
-              "About",
-              style: Appstyles.primary.copyWith(fontSize: 25.sp),
-            ),
-          ),
-          TextButton(
-            onPressed: () => scrollToSection(projectsKey),
-            child: Text(
-              "Projects",
-              style: Appstyles.primary.copyWith(fontSize: 25.sp),
-            ),
-          ),
-          TextButton(
-            onPressed: () => scrollToSection(contactKey),
-            child: Text(
-              "Contact",
-              style: Appstyles.primary.copyWith(fontSize: 25.sp),
-            ),
-          ),
-        ],
+        ),
       ),
       body: ListView(
-        controller: _scrollController,
         children: [
+          SizedBox(height: 30.h),
           Center(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 30.sp, vertical: 20.sp),
@@ -97,7 +50,7 @@ class _MobileUiState extends State<MobileUi> {
                 children: [
                   MobileTopSection(),
                   SizedBox(height: 100.h),
-                  Container(key: aboutKey, child: MobileAboutMeSection()),
+                  MobileAboutMeSection(),
                   SizedBox(height: 100.h),
                   MobileEducationSection(),
                   SizedBox(height: 100.h),
@@ -107,11 +60,11 @@ class _MobileUiState extends State<MobileUi> {
                   SizedBox(height: 100.h),
                   MobileToolsSection(),
                   SizedBox(height: 100.h),
-                  Container(key: projectsKey, child: MobileProjectsSection()),
+                  MobileProjectsSection(),
                   SizedBox(height: 100.h),
                   MobileCertificatesSection(),
                   SizedBox(height: 100.h),
-                  Container(key: contactKey, child: MobileContactSection()),
+                  MobileContactSection(),
                   ScrollAnimation(
                     childW: Divider(),
                     duration: Duration(milliseconds: 750),

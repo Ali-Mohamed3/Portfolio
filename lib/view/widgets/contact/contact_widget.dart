@@ -71,6 +71,7 @@ class _ContactWidgetState extends State<ContactWidget> {
                     },
                   ),
                 ),
+                SizedBox(height: 20.h),
                 CustomButton(
                   height: 80.h,
                   width: 200.w,

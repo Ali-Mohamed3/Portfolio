@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_portfolio/controller/firestore_controller/firestore_controller.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
+import 'package:my_portfolio/core/appstyles/appstyles.dart';
+import 'package:my_portfolio/core/di/di.dart';
+
+class TabletDescription extends StatefulWidget {
+  const TabletDescription({super.key});
+
+  @override
+  State<TabletDescription> createState() => _TabletDescriptionState();
+}
+
+class _TabletDescriptionState extends State<TabletDescription> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(20.sp),
+
+      decoration: BoxDecoration(
+        color: Appcolors.secondary,
+        borderRadius: BorderRadius.circular(15.r),
+        border: Border.all(width: 1.w, color: Colors.white),
+      ),
+      child: StreamBuilder(
+        stream: sl<FirestoreController>().getDescription(),
+
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return CircularProgressIndicator(color: Colors.white);
+          }
+          if (snapshot.hasError) {
+            return SelectableText("Error occured");
+          }
+          return SelectableText(
+            snapshot.data!.name!,
+            style: Appstyles.secondary.copyWith(fontSize: 20.sp),
+          );
+        },
+      ),
+    );
+  }
+}

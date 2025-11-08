@@ -12,27 +12,33 @@ class MobileSkillItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      children: [
-        Container(
-          alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(horizontal: 50.sp, vertical: 10.sp),
-          decoration: BoxDecoration(
-            color: Appcolors.secondary,
-            borderRadius: BorderRadius.circular(50.r),
-            border: Border.all(width: 1.w, color: Colors.white),
+    return Padding(
+      padding: EdgeInsets.all(12.0.sp),
+      child: Wrap(
+        children: [
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.symmetric(horizontal: 50.sp, vertical: 10.sp),
+            decoration: BoxDecoration(
+              color: Appcolors.secondary,
+              borderRadius: BorderRadius.circular(50.r),
+              border: Border.all(width: 1.w, color: Colors.white),
+            ),
+            child: Column(
+              children: [
+                SizedBox(height: 10.h),
+                SvgPicture.asset(AppAssets.bulb, width: 60.w, height: 60.h),
+                SizedBox(height: 20.h),
+                SelectableText(
+                  skill,
+                  style: Appstyles.secondary.copyWith(fontSize: 20.sp),
+                ),
+                SizedBox(height: 10.h),
+              ],
+            ),
           ),
-          child: Column(
-            children: [
-              SizedBox(height: 10.h),
-              SvgPicture.asset(AppAssets.bulb, width: 70.w, height: 70.h),
-              SizedBox(height: 20.h),
-              SelectableText(skill, style: Appstyles.secondary),
-              SizedBox(height: 10.h),
-            ],
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

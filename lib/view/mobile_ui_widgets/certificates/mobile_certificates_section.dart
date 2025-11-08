@@ -22,7 +22,10 @@ class _MobileCertificatesSectionState extends State<MobileCertificatesSection> {
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SelectableText("Certificates", style: Appstyles.primary),
+              SelectableText(
+                "Certificates",
+                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+              ),
             ],
           ),
           duration: Duration(milliseconds: 750),

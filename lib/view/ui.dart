@@ -49,6 +49,13 @@ class _UiState extends State<Ui> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(
+          "Ali Mohamed Ali",
+          style: Appstyles.primary.copyWith(
+            color: Colors.redAccent,
+            fontSize: 40.sp,
+          ),
+        ),
         backgroundColor: Color(0xff041112),
         actionsPadding: EdgeInsets.only(left: 100.w),
         actions: [
@@ -104,6 +111,7 @@ class _UiState extends State<Ui> {
             padding: EdgeInsets.symmetric(horizontal: 200.sp, vertical: 20.sp),
             child: Column(
               children: [
+                SizedBox(height: 20.h),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15.w),
                   child: TopSection(),

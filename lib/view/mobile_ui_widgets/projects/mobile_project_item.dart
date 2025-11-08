@@ -55,7 +55,12 @@ class MobileProjectItem extends StatelessWidget {
             ),
           ),
           SizedBox(height: 30.h),
-          Center(child: SelectableText(name, style: Appstyles.primary)),
+          Center(
+            child: Text(
+              name,
+              style: Appstyles.primary.copyWith(fontSize: 30.sp),
+            ),
+          ),
         ],
       ),
     );

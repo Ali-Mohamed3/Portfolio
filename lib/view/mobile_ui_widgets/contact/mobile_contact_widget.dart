@@ -33,79 +33,101 @@ class _MobileContactWidgetState extends State<MobileContactWidget> {
   Widget build(BuildContext context) {
     return Form(
       key: formKey,
-      child: Column(
-        children: [
-          Container(
-            width: 700.w,
-            height: 700.h,
-            padding: EdgeInsets.all(15.sp),
-            decoration: BoxDecoration(
-              color: Appcolors.secondary,
-              borderRadius: BorderRadius.circular(15.r),
-              border: Border.all(color: Colors.white),
-            ),
-            child: Column(
-              children: [
-                CustomTextField(
-                  hintText: "Enter your email",
-                  width: 600.w,
-                  height: 100.h,
-                  hintTextSized: 25.sp,
-                  controller: email,
-                  validator: (p0) {
-                    if (p0!.isEmpty) {
-                      return "Enter your email please";
-                    }
-                  },
-                ),
-                SizedBox(height: 30.h),
-                Expanded(
-                  child: CustomTextField(
-                    hintText: "Enter your message",
+      child: Padding(
+        padding: EdgeInsets.all(50.0.sp),
+        child: Column(
+          children: [
+            Container(
+              width: 700.w,
+              height: 700.h,
+              padding: EdgeInsets.all(15.sp),
+              decoration: BoxDecoration(
+                color: Appcolors.secondary,
+                borderRadius: BorderRadius.circular(15.r),
+                border: Border.all(color: Colors.white),
+              ),
+              child: Column(
+                children: [
+                  CustomTextField(
+                    hintText: "Enter your email",
                     width: 600.w,
-                    height: 600.h,
-                    hintTextSized: 25.sp,
-                    controller: message,
+                    height: 80.h,
+                    hintTextSized: 20.sp,
+                    controller: email,
                     validator: (p0) {
                       if (p0!.isEmpty) {
-                        return "Enter your message please";
+                        return "Enter your email please";
                       }
                     },
                   ),
-                ),
-                CustomButton(
-                  height: 80.h,
-                  width: 300.w,
-                  text: "Send",
-                  radius: 50,
-                  ontap: () {
-                    if (formKey.currentState!.validate()) {
-                      Map<String, dynamic> data = {
-                        'email': email.text,
-                        'message': message.text,
-                      };
-                      sl<FirestoreController>().db
-                          .collection('contact')
-                          .add(data)
-                          .then((DocumentReference doc) {
-                            return print("doc.id");
-                          });
-                      showCustomDialogue(context);
-                      email.clear();
-                      message.clear();
-                    }
-                  },
-                ),
-              ],
+                  SizedBox(height: 30.h),
+                  Expanded(
+                    child: CustomTextField(
+                      hintText: "Enter your message",
+                      width: 600.w,
+                      height: 500.h,
+                      hintTextSized: 20.sp,
+                      controller: message,
+                      validator: (p0) {
+                        if (p0!.isEmpty) {
+                          return "Enter your message please";
+                        }
+                      },
+                    ),
+                  ),
+                  SizedBox(height: 15.h),
+                  CustomButton(
+                    height: 80.h,
+                    width: 300.w,
+                    text: "Send",
+                    radius: 50,
+                    ontap: () {
+                      if (formKey.currentState!.validate()) {
+                        if (isValid(email.text)) {
+                          showCustomDialogue(
+                            context,
+                            "Thanks for contacting me",
+                            Icon(
+                              Icons.check_circle,
+                              color: Colors.green,
+                              size: 60.sp,
+                            ),
+                          );
+                          Map<String, dynamic> data = {
+                            'email': email.text,
+                            'message': message.text,
+                          };
+                          sl<FirestoreController>().db
+                              .collection('contact')
+                              .add(data);
+                        } else {
+                          showCustomDialogue(
+                            context,
+                            "Email is invalid",
+                            Icon(Icons.error, color: Colors.red, size: 60.sp),
+                          );
+                        }
+                        email.clear();
+                        message.clear();
+                      }
+                    },
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 }
 
-void showCustomDialogue(BuildContext context1) {
+bool isValid(String email) {
+  final regex = RegExp(r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$');
+  return regex.hasMatch(email);
+}
+
+void showCustomDialogue(BuildContext context1, String text, Icon icon) {
   showDialog(
     context: context1,
     builder: (BuildContext context) {
@@ -124,10 +146,10 @@ void showCustomDialogue(BuildContext context1) {
           padding: EdgeInsets.all(MediaQuery.sizeOf(context).width * .02),
           child: Column(
             children: [
-              Icon(Icons.check_circle, color: Colors.green, size: 60.sp),
+              icon,
               SizedBox(height: 50.h),
               SelectableText(
-                "Thanks for contacting me",
+                text,
                 style: Appstyles.secondary.copyWith(fontSize: 30.sp),
               ),
               SizedBox(height: 200.h),

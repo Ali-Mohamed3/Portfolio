@@ -4,6 +4,7 @@ import 'package:my_portfolio/core/di/di.dart';
 import 'package:my_portfolio/view/UI.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:my_portfolio/view/mobile_ui.dart';
+import 'package:my_portfolio/view/tablet_ui.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -30,6 +31,12 @@ class MyApp extends StatelessWidget {
               designSize: const Size(1920, 1080),
               minTextAdapt: true,
               builder: (context, child) => Ui(),
+            );
+          } else if (constraints.maxWidth >= 600) {
+            return ScreenUtilInit(
+              designSize: const Size(800, 1600),
+              minTextAdapt: true,
+              builder: (context, child) => TabletUi(),
             );
           } else {
             return ScreenUtilInit(

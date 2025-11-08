@@ -35,7 +35,7 @@ class _MobileDescriptionState extends State<MobileDescription> {
           }
           return SelectableText(
             snapshot.data!.name!,
-            style: Appstyles.secondary,
+            style: Appstyles.secondary.copyWith(fontSize: 20.sp),
           );
         },
       ),

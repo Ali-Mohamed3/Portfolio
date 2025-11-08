@@ -8,15 +8,26 @@ class PhotoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 400.w,
-      height: 500.h,
+      width: 450.w,
+      height: 450.h,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        border: Border.all(width: 1.sp, color: Colors.white),
-        image: DecorationImage(image: NetworkImage(url), fit: BoxFit.fill),
         boxShadow: [
-          BoxShadow(color: Colors.white, blurRadius: 20, spreadRadius: 5),
+          BoxShadow(
+            blurRadius: 20.sp,
+            spreadRadius: 10.sp,
+            color: Colors.white,
+          ),
         ],
+      ),
+      child: AspectRatio(
+        aspectRatio: 1,
+        child: Container(
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            image: DecorationImage(image: NetworkImage(url), fit: BoxFit.fill),
+          ),
+        ),
       ),
     );
   }

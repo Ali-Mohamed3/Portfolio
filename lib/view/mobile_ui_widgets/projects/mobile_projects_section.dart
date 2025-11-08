@@ -21,7 +21,12 @@ class _MobileProjectsSectionState extends State<MobileProjectsSection> {
         ScrollAnimation(
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [SelectableText("Projects", style: Appstyles.primary)],
+            children: [
+              SelectableText(
+                "Projects",
+                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+              ),
+            ],
           ),
           duration: Duration(milliseconds: 750),
         ),

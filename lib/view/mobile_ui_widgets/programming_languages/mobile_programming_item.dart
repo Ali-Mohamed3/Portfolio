@@ -10,7 +10,7 @@ class MobileProgrammingItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(30.0.sp),
+      padding: EdgeInsets.all(12.0.sp),
       child: Container(
         alignment: Alignment.center,
         width: 100.w,
@@ -29,7 +29,10 @@ class MobileProgrammingItem extends StatelessWidget {
           children: [
             SizedBox(width: 10.w),
 
-            SelectableText(language, style: Appstyles.secondary),
+            SelectableText(
+              language,
+              style: Appstyles.secondary.copyWith(fontSize: 20.sp),
+            ),
           ],
         ),
       ),

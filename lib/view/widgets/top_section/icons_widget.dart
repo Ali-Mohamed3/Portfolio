@@ -78,7 +78,10 @@ class _IconsState extends State<IconsWidget> {
               throw "couldn't launch url";
             }
           },
-          child: Image.asset(AppAssets.codeForces, width: 35.w, height: 35.h),
+          child: ClipRRect(
+            borderRadius: BorderRadiusGeometry.circular(6.r),
+            child: Image.asset(AppAssets.codeForces, width: 40.w, height: 40.h),
+          ),
         ),
         SizedBox(width: 20.w),
         InkWell(
@@ -90,7 +93,10 @@ class _IconsState extends State<IconsWidget> {
               throw "couldn't launch url";
             }
           },
-          child: Image.asset(AppAssets.leetCode, width: 35.w, height: 35.h),
+          child: ClipRRect(
+            borderRadius: BorderRadiusGeometry.circular(6.r),
+            child: Image.asset(AppAssets.leetCode, width: 40.w, height: 40.h),
+          ),
         ),
       ],
     );

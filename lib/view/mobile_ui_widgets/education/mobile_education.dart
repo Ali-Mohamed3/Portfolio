@@ -38,17 +38,17 @@ class _MobileEducationState extends State<MobileEducation> {
             children: [
               SelectableText(
                 snapshot.data!.university,
-                style: Appstyles.secondary,
+                style: Appstyles.secondary.copyWith(fontSize: 20.sp),
               ),
               SizedBox(height: 10.h),
               SelectableText(
                 snapshot.data!.faculty,
-                style: Appstyles.secondary,
+                style: Appstyles.secondary.copyWith(fontSize: 20.sp),
               ),
               SizedBox(height: 10.h),
               SelectableText(
                 snapshot.data!.speciality,
-                style: Appstyles.secondary,
+                style: Appstyles.secondary.copyWith(fontSize: 20.sp),
               ),
               SizedBox(height: 10.h),
             ],

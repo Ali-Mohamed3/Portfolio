@@ -25,8 +25,8 @@ class _MobileBottomSectionState extends State<MobileBottomSection> {
               SvgPicture.asset(
                 AppAssets.copyRight,
                 color: Colors.white,
-                width: 30.w,
-                height: 30.h,
+                width: 20.w,
+                height: 20.h,
               ),
 
               SizedBox(width: 5.w),
@@ -34,13 +34,13 @@ class _MobileBottomSectionState extends State<MobileBottomSection> {
                 "2025",
                 style: Appstyles.secondary.copyWith(
                   color: Color(0xff247D87),
-                  fontSize: 30.sp,
+                  fontSize: 20.sp,
                 ),
               ),
               SizedBox(width: 5.w),
               SelectableText(
                 "Made by",
-                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+                style: Appstyles.primary.copyWith(fontSize: 20.sp),
               ),
               SizedBox(width: 5.w),
               InkWell(
@@ -56,7 +56,7 @@ class _MobileBottomSectionState extends State<MobileBottomSection> {
                   "Ali Mohamed Ali",
                   style: Appstyles.primary.copyWith(
                     color: Color(0xff9573D9),
-                    fontSize: 30.sp,
+                    fontSize: 20.sp,
                   ),
                 ),
               ),
