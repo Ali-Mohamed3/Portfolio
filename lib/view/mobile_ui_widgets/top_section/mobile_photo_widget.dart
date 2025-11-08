@@ -18,14 +18,23 @@ class _MobilePhotoWidgetState extends State<MobilePhotoWidget> {
       height: 400.h,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        image: DecorationImage(
-          image: NetworkImage(widget.url, scale: 4.3),
-          fit: BoxFit.none,
-          // scale: .1,
-        ),
+
         boxShadow: [
           BoxShadow(color: Colors.white, blurRadius: 20, spreadRadius: 5),
         ],
+      ),
+      child: AspectRatio(
+        aspectRatio: 1,
+        child: Container(
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            image: DecorationImage(
+              image: NetworkImage(widget.url),
+              fit: BoxFit.none,
+              scale: 4.3,
+            ),
+          ),
+        ),
       ),
     );
   }

@@ -47,42 +47,13 @@ class _TabletUiState extends State<TabletUi> {
       backgroundColor: Color(0xff041112),
       appBar: AppBar(
         backgroundColor: Color(0xff041112),
-        actions: [
-          TextButton(
-            onPressed: () {
-              _scrollController.animateTo(
-                0,
-                duration: const Duration(milliseconds: 1500),
-                curve: Curves.easeOut,
-              );
-            },
-            child: Text(
-              "Home",
-              style: Appstyles.primary.copyWith(fontSize: 25.sp),
-            ),
+        title: Text(
+          "Ali Mohamed Ali",
+          style: Appstyles.primary.copyWith(
+            color: Colors.redAccent,
+            fontSize: 30.sp,
           ),
-          TextButton(
-            onPressed: () => scrollToSection(aboutKey),
-            child: Text(
-              "About",
-              style: Appstyles.primary.copyWith(fontSize: 25.sp),
-            ),
-          ),
-          TextButton(
-            onPressed: () => scrollToSection(projectsKey),
-            child: Text(
-              "Projects",
-              style: Appstyles.primary.copyWith(fontSize: 25.sp),
-            ),
-          ),
-          TextButton(
-            onPressed: () => scrollToSection(contactKey),
-            child: Text(
-              "Contact",
-              style: Appstyles.primary.copyWith(fontSize: 25.sp),
-            ),
-          ),
-        ],
+        ),
       ),
       body: ListView(
         controller: _scrollController,

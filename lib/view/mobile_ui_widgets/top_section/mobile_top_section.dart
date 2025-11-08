@@ -39,7 +39,7 @@ class _MobileTopSectionState extends State<MobileTopSection> {
           },
         ),
 
-        SizedBox(height: 20.h),
+        SizedBox(height: 30.h),
         SelectableText("Ali Mohamed Ali", style: Appstyles.primary),
         SizedBox(height: 20.h),
         MobileGetInfo(),

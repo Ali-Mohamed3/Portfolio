@@ -52,7 +52,7 @@ class _TabletTopSectionState extends State<TabletTopSection> {
         SizedBox(height: 70.h),
         TabletIconsWidget(),
         SizedBox(height: 70.h),
-        DownloadButton(text: "Download my CV", width: 350.w, height: 100.h),
+        DownloadButton(text: "Download my CV", width: 300.w, height: 100.h),
       ],
     );
   }
