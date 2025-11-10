@@ -33,11 +33,9 @@ class _TabletProjectsWidgetsState extends State<TabletProjectsWidgets> {
         List<Projects> projects = snapshot.data!;
         return CarouselSlider(
           options: CarouselOptions(
-            height: height * .37,
+            height: height * .4,
             viewportFraction: 1,
             enableInfiniteScroll: false,
-            autoPlay: true,
-            autoPlayInterval: Duration(seconds: 10),
           ),
           items: projects.map((x) {
             return InkWell(

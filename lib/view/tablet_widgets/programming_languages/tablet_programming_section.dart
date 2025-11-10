@@ -25,7 +25,7 @@ class _TabletProgrammingSectionState extends State<TabletProgrammingSection> {
             children: [
               SelectableText(
                 "Programming languages",
-                style: Appstyles.primary.copyWith(fontSize: 40.sp),
+                style: Appstyles.primary.copyWith(fontSize: 35.sp),
               ),
             ],
           ),

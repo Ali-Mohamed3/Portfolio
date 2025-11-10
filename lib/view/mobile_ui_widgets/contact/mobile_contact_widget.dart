@@ -31,6 +31,8 @@ class _MobileContactWidgetState extends State<MobileContactWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     return Form(
       key: formKey,
       child: Padding(
@@ -38,8 +40,8 @@ class _MobileContactWidgetState extends State<MobileContactWidget> {
         child: Column(
           children: [
             Container(
-              width: 700.w,
-              height: 700.h,
+              width: width * .85,
+              height: 380,
               padding: EdgeInsets.all(15.sp),
               decoration: BoxDecoration(
                 color: Appcolors.secondary,
@@ -155,7 +157,7 @@ void showCustomDialogue(BuildContext context1, String text, Icon icon) {
                 text,
                 style: Appstyles.secondary.copyWith(fontSize: 30.sp),
               ),
-              SizedBox(height: 200.h),
+              SizedBox(height: 250.h),
               CustomButton(
                 height: 50.h,
                 width: 200.w,

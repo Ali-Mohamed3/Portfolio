@@ -45,7 +45,7 @@ class _TabletTopSectionState extends State<TabletTopSection> {
         SizedBox(height: 70.h),
         SelectableText(
           "Ali Mohamed Ali",
-          style: Appstyles.primary.copyWith(fontSize: 30.sp),
+          style: Appstyles.primary.copyWith(fontSize: 40.sp),
         ),
         SizedBox(height: 20.h),
         TabletGetInfo(),

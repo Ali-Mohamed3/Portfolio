@@ -25,19 +25,24 @@ class _ToolsWidgetState extends State<ToolsWidget> {
           return SelectableText("Error occured");
         }
         List<ToolsApps> tools = snapshot.data!;
-        return GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            mainAxisSpacing: 20.h,
-            crossAxisSpacing: 20.w,
-            childAspectRatio: 10,
-          ),
-          physics: NeverScrollableScrollPhysics(),
-          shrinkWrap: true,
-          itemCount: tools.length,
-          itemBuilder: (context, index) {
-            return ToolsItem(tool: tools[index].name!);
-          },
+
+        return Column(
+          children: [
+            GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 20.h,
+                crossAxisSpacing: 20.w,
+                childAspectRatio: 10,
+              ),
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: tools.length,
+              itemBuilder: (context, index) {
+                return ToolsItem(tool: tools[index].name!);
+              },
+            ),
+          ],
         );
       },
     );

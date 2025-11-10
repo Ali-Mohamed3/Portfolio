@@ -26,7 +26,7 @@ class _TabletContactSectionState extends State<TabletContactSection> {
             children: [
               SelectableText(
                 "Contact me",
-                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+                style: Appstyles.primary.copyWith(fontSize: 35.sp),
               ),
             ],
           ),

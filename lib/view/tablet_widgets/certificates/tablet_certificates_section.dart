@@ -25,7 +25,7 @@ class _TabletCertificatesSectionState extends State<TabletCertificatesSection> {
             children: [
               SelectableText(
                 "Certificates",
-                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+                style: Appstyles.primary.copyWith(fontSize: 35.sp),
               ),
             ],
           ),

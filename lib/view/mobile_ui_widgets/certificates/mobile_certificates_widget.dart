@@ -34,8 +34,6 @@ class _MobileCertificatesWidgetState extends State<MobileCertificatesWidget> {
             height: height * .3,
             viewportFraction: 1,
             enableInfiniteScroll: false,
-            autoPlay: true,
-            autoPlayInterval: Duration(seconds: 10),
           ),
           items: certificates.map((x) {
             return MobileCertificateItem(image: x.image!);

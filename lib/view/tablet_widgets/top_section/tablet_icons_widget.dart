@@ -14,6 +14,7 @@ class TabletIconsWidget extends StatefulWidget {
 class _IconsState extends State<TabletIconsWidget> {
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -30,11 +31,11 @@ class _IconsState extends State<TabletIconsWidget> {
           },
           child: SvgPicture.asset(
             AppAssets.linkedIn,
-            width: 70.w,
-            height: 70.h,
+            width: 65.w,
+            height: 65.h,
           ),
         ),
-        SizedBox(width: 20.w),
+        SizedBox(width: width * .02),
         InkWell(
           onTap: () async {
             final Uri url = Uri.parse("https://github.com/Ali-Mohamed3");
@@ -46,12 +47,12 @@ class _IconsState extends State<TabletIconsWidget> {
           },
           child: SvgPicture.asset(
             AppAssets.gitHub,
-            width: 70.w,
-            height: 70.h,
+            width: 65.w,
+            height: 65.h,
             color: Color(0xff25F0FB),
           ),
         ),
-        SizedBox(width: 20.w),
+        SizedBox(width: width * .02),
 
         InkWell(
           onTap: () async {
@@ -64,11 +65,11 @@ class _IconsState extends State<TabletIconsWidget> {
           },
           child: SvgPicture.asset(
             AppAssets.whatsApp,
-            width: 70.w,
-            height: 70.h,
+            width: 65.w,
+            height: 65.h,
           ),
         ),
-        SizedBox(width: 20.w),
+        SizedBox(width: width * .02),
         InkWell(
           onTap: () async {
             final Uri url = Uri.parse("https://codeforces.com/profile/_ALI__");
@@ -78,9 +79,12 @@ class _IconsState extends State<TabletIconsWidget> {
               throw "couldn't launch url";
             }
           },
-          child: Image.asset(AppAssets.codeForces, width: 50.w, height: 60.h),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(AppAssets.codeForces, width: 40.w, height: 60.h),
+          ),
         ),
-        SizedBox(width: 20.w),
+        SizedBox(width: width * .02),
         InkWell(
           onTap: () async {
             final Uri url = Uri.parse("https://leetcode.com/u/_Ali_Mo_/");
@@ -90,7 +94,10 @@ class _IconsState extends State<TabletIconsWidget> {
               throw "couldn't launch url";
             }
           },
-          child: Image.asset(AppAssets.leetCode, width: 50.w, height: 60.h),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(AppAssets.leetCode, width: 40.w, height: 60.h),
+          ),
         ),
       ],
     );

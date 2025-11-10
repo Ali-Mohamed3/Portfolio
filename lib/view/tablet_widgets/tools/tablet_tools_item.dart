@@ -13,7 +13,7 @@ class TabletToolsItem extends StatelessWidget {
       padding: EdgeInsets.all(10.0.sp),
       child: Container(
         width: 100.w,
-        height: 130.h,
+        height: 110.h,
         decoration: BoxDecoration(
           color: Appcolors.secondary,
           borderRadius: BorderRadius.circular(40.r),
@@ -30,7 +30,7 @@ class TabletToolsItem extends StatelessWidget {
 
             SelectableText(
               tool,
-              style: Appstyles.secondary.copyWith(fontSize: 25.sp),
+              style: Appstyles.secondary.copyWith(fontSize: 20.sp),
             ),
           ],
         ),

@@ -14,7 +14,7 @@ class TabletProgrammingItem extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         width: 100.w,
-        height: 130.h,
+        height: 110.h,
         decoration: BoxDecoration(
           color: Appcolors.secondary,
           borderRadius: BorderRadius.circular(40.r),

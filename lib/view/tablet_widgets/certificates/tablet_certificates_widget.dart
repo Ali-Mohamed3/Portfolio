@@ -35,8 +35,6 @@ class _TabletCertificatesWidgetState extends State<TabletCertificatesWidget> {
             height: height * .35,
             viewportFraction: 1,
             enableInfiniteScroll: false,
-            autoPlay: true,
-            autoPlayInterval: Duration(seconds: 10),
           ),
           items: certificates.map((x) {
             return TabletCertificateItem(image: x.image!);
