@@ -50,6 +50,8 @@ class _ContactWidgetState extends State<ContactWidget> {
                   hintText: "Enter your email",
                   width: 500.w,
                   height: 70.h,
+                  fontSize: 25.sp,
+                  hintTextSized: 21.sp,
                   controller: email,
                   validator: (p0) {
                     if (p0!.isEmpty) {
@@ -63,12 +65,15 @@ class _ContactWidgetState extends State<ContactWidget> {
                     hintText: "Enter your message",
                     width: 500.w,
                     height: 500,
+                    fontSize: 25.sp,
+                    hintTextSized: 21.sp,
                     controller: message,
                     validator: (p0) {
                       if (p0!.isEmpty) {
                         return "Enter your message please";
                       }
                     },
+                    maxLines: 20,
                   ),
                 ),
                 SizedBox(height: 20.h),

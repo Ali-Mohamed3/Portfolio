@@ -13,6 +13,8 @@ class CustomTextField extends StatelessWidget {
   final bool? isPassword;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
+  final double? fontSize;
+  final int? maxLines;
   const CustomTextField({
     super.key,
     this.hintText,
@@ -23,22 +25,25 @@ class CustomTextField extends StatelessWidget {
     this.validator,
     this.height,
     this.hintTextSized,
+    this.fontSize,
+    this.maxLines,
   });
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: width,
-      height: height,
       child: TextFormField(
-        maxLines: 15,
-        textAlignVertical: TextAlignVertical.center,
+        maxLines: maxLines ?? 1,
+        textAlignVertical: maxLines == 1
+            ? TextAlignVertical.center
+            : TextAlignVertical.top,
         controller: controller,
         validator: validator,
         autofocus: false,
         obscureText: isPassword ?? false,
         style: Appstyles.secondary.copyWith(
           color: Colors.white,
-          fontSize: 22.sp,
+          fontSize: fontSize ?? 22.sp,
         ),
         decoration: InputDecoration(
           hintText: hintText ?? "",
@@ -46,6 +51,10 @@ class CustomTextField extends StatelessWidget {
             fontSize: hintTextSized ?? 15.sp,
             color: Color(0xff8391A1),
             fontWeight: FontWeight.w400,
+          ),
+          contentPadding: EdgeInsets.symmetric(
+            horizontal: 16.w,
+            vertical: maxLines == 1 ? 0 : 20.h,
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15.r),

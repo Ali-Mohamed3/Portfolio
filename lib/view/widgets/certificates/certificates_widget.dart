@@ -17,6 +17,7 @@ class _CertificatesWidgetState extends State<CertificatesWidget> {
   final CarouselSliderController _controller = CarouselSliderController();
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     return StreamBuilder(
       stream: sl<FirestoreController>().getCertificates(),
       builder: (context, snapshot) {
@@ -32,7 +33,7 @@ class _CertificatesWidgetState extends State<CertificatesWidget> {
             CarouselSlider(
               carouselController: _controller,
               options: CarouselOptions(
-                height: 400.0,
+                height: height * .4,
                 viewportFraction: 1,
                 enableInfiniteScroll: false,
                 autoPlayInterval: Duration(seconds: 4),

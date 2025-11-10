@@ -24,7 +24,7 @@ class _TabletToolsSectionState extends State<TabletToolsSection> {
             children: [
               SelectableText(
                 "Tools",
-                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+                style: Appstyles.primary.copyWith(fontSize: 35.sp),
               ),
             ],
           ),

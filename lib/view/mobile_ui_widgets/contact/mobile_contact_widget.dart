@@ -31,6 +31,8 @@ class _MobileContactWidgetState extends State<MobileContactWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     return Form(
       key: formKey,
       child: Padding(
@@ -38,8 +40,8 @@ class _MobileContactWidgetState extends State<MobileContactWidget> {
         child: Column(
           children: [
             Container(
-              width: 700.w,
-              height: 700.h,
+              width: width * .85,
+              height: 380,
               padding: EdgeInsets.all(15.sp),
               decoration: BoxDecoration(
                 color: Appcolors.secondary,
@@ -49,10 +51,11 @@ class _MobileContactWidgetState extends State<MobileContactWidget> {
               child: Column(
                 children: [
                   CustomTextField(
+                    fontSize: 25.sp,
                     hintText: "Enter your email",
                     width: 600.w,
                     height: 80.h,
-                    hintTextSized: 20.sp,
+                    hintTextSized: 21.sp,
                     controller: email,
                     validator: (p0) {
                       if (p0!.isEmpty) {
@@ -63,16 +66,18 @@ class _MobileContactWidgetState extends State<MobileContactWidget> {
                   SizedBox(height: 30.h),
                   Expanded(
                     child: CustomTextField(
+                      fontSize: 25.sp,
                       hintText: "Enter your message",
                       width: 600.w,
                       height: 500.h,
-                      hintTextSized: 20.sp,
+                      hintTextSized: 21.sp,
                       controller: message,
                       validator: (p0) {
                         if (p0!.isEmpty) {
                           return "Enter your message please";
                         }
                       },
+                      maxLines: 20,
                     ),
                   ),
                   SizedBox(height: 15.h),
@@ -152,7 +157,7 @@ void showCustomDialogue(BuildContext context1, String text, Icon icon) {
                 text,
                 style: Appstyles.secondary.copyWith(fontSize: 30.sp),
               ),
-              SizedBox(height: 200.h),
+              SizedBox(height: 250.h),
               CustomButton(
                 height: 50.h,
                 width: 200.w,

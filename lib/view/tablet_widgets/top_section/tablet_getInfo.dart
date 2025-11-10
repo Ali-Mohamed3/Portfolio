@@ -27,7 +27,8 @@ class _TabletGetInfoState extends State<TabletGetInfo> {
           alignment: Alignment.center,
           child: SelectableText(
             snapshot.data!.info.toString(),
-            style: Appstyles.secondary.copyWith(fontSize: 20.sp),
+            textAlign: TextAlign.center,
+            style: Appstyles.secondary.copyWith(fontSize: 25.sp),
           ),
         );
       },

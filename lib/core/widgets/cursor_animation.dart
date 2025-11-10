@@ -21,14 +21,14 @@ class _CursorAnimationState extends State<CursorAnimation> {
         _isIn = false;
       }),
       child: AnimatedScale(
-        scale: _isIn ? 1.1 : 1.0,
+        scale: _isIn ? 1.08 : 1.0,
         duration: const Duration(milliseconds: 200),
         child: Wrap(
           children: [
             AnimatedContainer(
               duration: const Duration(milliseconds: 200),
               decoration: BoxDecoration(
-                color: _isIn ? Colors.redAccent : Colors.transparent,
+                color: _isIn ? Colors.red : Colors.transparent,
                 borderRadius: BorderRadius.circular(50.r),
               ),
               child: widget.childW,

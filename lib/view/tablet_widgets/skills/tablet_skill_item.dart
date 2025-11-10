@@ -12,28 +12,30 @@ class TabletSkillItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200.w,
-      height: 80.h,
-      alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: 50.sp, vertical: 20.sp),
-      decoration: BoxDecoration(
-        color: Appcolors.secondary,
-        borderRadius: BorderRadius.circular(50.r),
-        border: Border.all(width: 1.w, color: Colors.white),
-      ),
-      child: Column(
-        children: [
-          SizedBox(height: 10.h),
-          SvgPicture.asset(AppAssets.bulb, width: 90.w, height: 90.h),
-          SizedBox(height: 25.h),
-          SelectableText(
-            skill,
-            style: Appstyles.secondary.copyWith(fontSize: 20.sp),
+    return Wrap(
+      children: [
+        Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.symmetric(horizontal: 50.sp, vertical: 20.sp),
+          decoration: BoxDecoration(
+            color: Appcolors.secondary,
+            borderRadius: BorderRadius.circular(50.r),
+            border: Border.all(width: 1.w, color: Colors.white),
           ),
-          SizedBox(height: 10.h),
-        ],
-      ),
+          child: Column(
+            children: [
+              SizedBox(height: 10.h),
+              SvgPicture.asset(AppAssets.bulb, width: 90.w, height: 90.h),
+              SizedBox(height: 25.h),
+              SelectableText(
+                skill,
+                style: Appstyles.secondary.copyWith(fontSize: 20.sp),
+              ),
+              SizedBox(height: 10.h),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

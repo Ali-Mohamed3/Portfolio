@@ -13,9 +13,10 @@ class TabletPhotoWidget extends StatefulWidget {
 class _TabletPhotoWidgetState extends State<TabletPhotoWidget> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size.width * 0.4;
     return Container(
-      width: 500.w,
-      height: 500.h,
+      width: size,
+      height: size,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
 
@@ -30,8 +31,7 @@ class _TabletPhotoWidgetState extends State<TabletPhotoWidget> {
             shape: BoxShape.circle,
             image: DecorationImage(
               image: NetworkImage(widget.url),
-              fit: BoxFit.none,
-              scale: 3.9,
+              fit: BoxFit.cover,
             ),
           ),
         ),

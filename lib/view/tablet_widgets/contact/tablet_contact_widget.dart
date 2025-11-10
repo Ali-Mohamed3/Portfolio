@@ -31,6 +31,8 @@ class _TabletContactWidgetState extends State<TabletContactWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     return Form(
       key: formKey,
       child: Padding(
@@ -38,8 +40,8 @@ class _TabletContactWidgetState extends State<TabletContactWidget> {
         child: Column(
           children: [
             Container(
-              width: 600.w,
-              height: 900.h,
+              width: width * .9,
+              height: 750,
               padding: EdgeInsets.all(15.sp),
               decoration: BoxDecoration(
                 color: Appcolors.secondary,
@@ -52,7 +54,8 @@ class _TabletContactWidgetState extends State<TabletContactWidget> {
                     hintText: "Enter your email",
                     width: 600.w,
                     height: 100.h,
-                    hintTextSized: 20.sp,
+                    fontSize: 25.sp,
+                    hintTextSized: 21.sp,
                     controller: email,
                     validator: (p0) {
                       if (p0!.isEmpty) {
@@ -64,15 +67,17 @@ class _TabletContactWidgetState extends State<TabletContactWidget> {
                   Expanded(
                     child: CustomTextField(
                       hintText: "Enter your message",
+                      fontSize: 25.sp,
                       width: 600.w,
                       height: 800.h,
-                      hintTextSized: 20.sp,
+                      hintTextSized: 21.sp,
                       controller: message,
                       validator: (p0) {
                         if (p0!.isEmpty) {
                           return "Enter your message please";
                         }
                       },
+                      maxLines: 20,
                     ),
                   ),
                   SizedBox(height: 30.h),
@@ -137,7 +142,7 @@ void showCustomDialogue(BuildContext context1, String text, Icon icon) {
         ),
         child: Container(
           width: 500.w,
-          height: 500.h,
+          height: 350,
           decoration: BoxDecoration(
             color: Color(0xff041112),
             borderRadius: BorderRadius.circular(20.r),
@@ -152,9 +157,9 @@ void showCustomDialogue(BuildContext context1, String text, Icon icon) {
                 text,
                 style: Appstyles.secondary.copyWith(fontSize: 30.sp),
               ),
-              SizedBox(height: 100.h),
+              SizedBox(height: 170.h),
               CustomButton(
-                height: 50.h,
+                height: 80.h,
                 width: 200.w,
                 radius: 50,
                 text: "Ok",
