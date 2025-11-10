@@ -20,6 +20,7 @@ class TabletProjectsWidgets extends StatefulWidget {
 class _TabletProjectsWidgetsState extends State<TabletProjectsWidgets> {
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     return StreamBuilder(
       stream: sl<FirestoreController>().getProjects(),
       builder: (context, snapshot) {
@@ -32,7 +33,7 @@ class _TabletProjectsWidgetsState extends State<TabletProjectsWidgets> {
         List<Projects> projects = snapshot.data!;
         return CarouselSlider(
           options: CarouselOptions(
-            height: 700.0.h,
+            height: height * .37,
             viewportFraction: 1,
             enableInfiniteScroll: false,
             autoPlay: true,

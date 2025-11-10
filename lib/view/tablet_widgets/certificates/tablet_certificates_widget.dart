@@ -19,6 +19,7 @@ class TabletCertificatesWidget extends StatefulWidget {
 class _TabletCertificatesWidgetState extends State<TabletCertificatesWidget> {
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     return StreamBuilder(
       stream: sl<FirestoreController>().getCertificates(),
       builder: (context, snapshot) {
@@ -31,7 +32,7 @@ class _TabletCertificatesWidgetState extends State<TabletCertificatesWidget> {
         List<Certificates> certificates = snapshot.data!;
         return CarouselSlider(
           options: CarouselOptions(
-            height: 600.h,
+            height: height * .35,
             viewportFraction: 1,
             enableInfiniteScroll: false,
             autoPlay: true,

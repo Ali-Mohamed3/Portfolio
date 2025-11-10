@@ -25,7 +25,7 @@ class _MobileEducationSectionState extends State<MobileEducationSection> {
             children: [
               SelectableText(
                 "Education",
-                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+                style: Appstyles.primary.copyWith(fontSize: 35.sp),
               ),
               SizedBox(width: 16.w),
               SvgPicture.asset(

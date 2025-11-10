@@ -7,9 +7,10 @@ class PhotoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size.width * 0.21;
     return Container(
-      width: 450.w,
-      height: 450.h,
+      width: size,
+      height: size,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         boxShadow: [
@@ -25,7 +26,7 @@ class PhotoWidget extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            image: DecorationImage(image: NetworkImage(url), fit: BoxFit.fill),
+            image: DecorationImage(image: NetworkImage(url), fit: BoxFit.cover),
           ),
         ),
       ),

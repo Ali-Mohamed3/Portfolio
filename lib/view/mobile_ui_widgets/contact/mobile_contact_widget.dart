@@ -49,10 +49,11 @@ class _MobileContactWidgetState extends State<MobileContactWidget> {
               child: Column(
                 children: [
                   CustomTextField(
+                    fontSize: 25.sp,
                     hintText: "Enter your email",
                     width: 600.w,
                     height: 80.h,
-                    hintTextSized: 20.sp,
+                    hintTextSized: 21.sp,
                     controller: email,
                     validator: (p0) {
                       if (p0!.isEmpty) {
@@ -63,16 +64,18 @@ class _MobileContactWidgetState extends State<MobileContactWidget> {
                   SizedBox(height: 30.h),
                   Expanded(
                     child: CustomTextField(
+                      fontSize: 25.sp,
                       hintText: "Enter your message",
                       width: 600.w,
                       height: 500.h,
-                      hintTextSized: 20.sp,
+                      hintTextSized: 21.sp,
                       controller: message,
                       validator: (p0) {
                         if (p0!.isEmpty) {
                           return "Enter your message please";
                         }
                       },
+                      maxLines: 20,
                     ),
                   ),
                   SizedBox(height: 15.h),

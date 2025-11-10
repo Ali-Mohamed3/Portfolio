@@ -31,10 +31,11 @@ class _TabletSkillState extends State<TabletSkill> {
         return GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            mainAxisSpacing: 40.h,
+            mainAxisSpacing: 10.h,
             crossAxisSpacing: 30.w,
-            childAspectRatio: 1.75,
+            childAspectRatio: 1.7,
           ),
+
           padding: EdgeInsets.symmetric(vertical: 50.h),
           itemCount: skills.length,
           physics: NeverScrollableScrollPhysics(),

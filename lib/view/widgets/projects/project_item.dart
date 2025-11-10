@@ -19,9 +19,10 @@ class ProjectItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     return Container(
-      width: 602.w,
-      height: 900.h,
+      width: width * .35,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),
         border: Border.all(width: 1.sp, color: Colors.white),
@@ -35,18 +36,21 @@ class ProjectItem extends StatelessWidget {
               children: [
                 CachedNetworkImage(
                   imageUrl: image,
-                  height: 420.h,
-                  width: 200.w,
+                  height: height * .35,
+                  width: width * .116,
+                  fit: BoxFit.fill,
                 ),
                 CachedNetworkImage(
                   imageUrl: image2,
-                  height: 420.h,
-                  width: 200.w,
+                  height: height * .35,
+                  width: width * .116,
+                  fit: BoxFit.fill,
                 ),
                 CachedNetworkImage(
                   imageUrl: image3,
-                  height: 420.h,
-                  width: 200.w,
+                  height: height * .35,
+                  width: width * .116,
+                  fit: BoxFit.fill,
                 ),
               ],
             ),

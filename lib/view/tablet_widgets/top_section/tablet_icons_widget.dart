@@ -68,7 +68,7 @@ class _IconsState extends State<TabletIconsWidget> {
             height: 70.h,
           ),
         ),
-        SizedBox(width: 5.w),
+        SizedBox(width: 20.w),
         InkWell(
           onTap: () async {
             final Uri url = Uri.parse("https://codeforces.com/profile/_ALI__");
@@ -80,7 +80,7 @@ class _IconsState extends State<TabletIconsWidget> {
           },
           child: Image.asset(AppAssets.codeForces, width: 50.w, height: 60.h),
         ),
-        SizedBox(width: 1.w),
+        SizedBox(width: 20.w),
         InkWell(
           onTap: () async {
             final Uri url = Uri.parse("https://leetcode.com/u/_Ali_Mo_/");

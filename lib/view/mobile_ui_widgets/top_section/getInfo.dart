@@ -29,6 +29,7 @@ class _MobileGetInfoState extends State<MobileGetInfo> {
             width: 500.w,
             child: SelectableText(
               snapshot.data!.info.toString(),
+              textAlign: TextAlign.center,
               style: Appstyles.secondary.copyWith(fontSize: 25.sp),
             ),
           ),

@@ -19,10 +19,11 @@ class TabletProjectItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     return Container(
       alignment: Alignment.center,
-      width: 502.w,
-      height: 100.h,
+      width: width * .55,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),
         border: Border.all(width: 1.sp, color: Colors.white),
@@ -36,20 +37,20 @@ class TabletProjectItem extends StatelessWidget {
               children: [
                 CachedNetworkImage(
                   imageUrl: image,
-                  height: 500.h,
-                  width: 166.w,
+                  height: height * .3,
+                  width: width * .182,
                   fit: BoxFit.fill,
                 ),
                 CachedNetworkImage(
                   imageUrl: image2,
-                  height: 500.h,
-                  width: 166.w,
+                  height: height * .3,
+                  width: width * .182,
                   fit: BoxFit.fill,
                 ),
                 CachedNetworkImage(
                   imageUrl: image3,
-                  height: 500.h,
-                  width: 166.w,
+                  height: height * .3,
+                  width: width * .182,
                   fit: BoxFit.fill,
                 ),
               ],

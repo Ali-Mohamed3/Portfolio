@@ -30,7 +30,7 @@ class MobileToolsItem extends StatelessWidget {
 
             SelectableText(
               tool,
-              style: Appstyles.secondary.copyWith(fontSize: 20.sp),
+              style: Appstyles.secondary.copyWith(fontSize: 25.sp),
             ),
           ],
         ),

@@ -31,7 +31,7 @@ class MobileProgrammingItem extends StatelessWidget {
 
             SelectableText(
               language,
-              style: Appstyles.secondary.copyWith(fontSize: 20.sp),
+              style: Appstyles.secondary.copyWith(fontSize: 25.sp),
             ),
           ],
         ),

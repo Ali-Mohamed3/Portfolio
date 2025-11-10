@@ -31,7 +31,7 @@ class MobileSkillItem extends StatelessWidget {
                 SizedBox(height: 20.h),
                 SelectableText(
                   skill,
-                  style: Appstyles.secondary.copyWith(fontSize: 20.sp),
+                  style: Appstyles.secondary.copyWith(fontSize: 25.sp),
                 ),
                 SizedBox(height: 10.h),
               ],

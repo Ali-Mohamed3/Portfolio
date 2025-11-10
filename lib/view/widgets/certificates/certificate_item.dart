@@ -7,9 +7,9 @@ class CertificateItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return Container(
-      width: 500.w,
-      height: 400.h,
+      width: width * .3,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),
         image: DecorationImage(image: NetworkImage(image), fit: BoxFit.fill),
