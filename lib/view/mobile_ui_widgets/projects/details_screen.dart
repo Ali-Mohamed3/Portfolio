@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -98,7 +99,7 @@ class DetailsScreen extends StatelessWidget {
                     }
                   },
                   radius: 20.r,
-                  color: Colors.lightBlue,
+                  color: Appcolors.buttonColor,
                 ),
                 SizedBox(height: 100.h),
               ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/widgets/education/education_widget.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
@@ -28,7 +29,7 @@ class _EducationSectionState extends State<EducationSection> {
                 AppAssets.education,
                 width: 50.w,
                 height: 50.h,
-                color: Colors.white,
+                color: Appcolors.text,
               ),
             ],
           ),

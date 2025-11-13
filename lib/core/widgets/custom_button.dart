@@ -34,7 +34,10 @@ class CustomButton extends StatelessWidget {
       ),
 
       onPressed: ontap ?? () {},
-      child: Text(text!, style: Appstyles.primary.copyWith(fontSize: 20.sp)),
+      child: Text(
+        text!,
+        style: Appstyles.primary.copyWith(fontSize: 20.sp, color: Colors.white),
+      ),
     );
   }
 }

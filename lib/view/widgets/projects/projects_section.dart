@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
 import 'package:my_portfolio/view/widgets/projects/projects_widget.dart';
@@ -20,7 +23,16 @@ class _ProjectsSectionState extends State<ProjectsSection> {
         ScrollAnimation(
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [SelectableText("Projects", style: Appstyles.primary)],
+            children: [
+              SelectableText("Projects", style: Appstyles.primary),
+              SizedBox(width: 16.w),
+              SvgPicture.asset(
+                AppAssets.projects,
+                width: 50.w,
+                height: 50.h,
+                color: Appcolors.text,
+              ),
+            ],
           ),
           duration: Duration(milliseconds: 750),
         ),

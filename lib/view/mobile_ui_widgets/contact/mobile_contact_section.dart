@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/contact/mobile_contact_widget.dart';
 import 'package:my_portfolio/view/widgets/contact/contact_widget.dart';
@@ -26,6 +27,13 @@ class _MobileContactSectionState extends State<MobileContactSection> {
               SelectableText(
                 "Contact me",
                 style: Appstyles.primary.copyWith(fontSize: 30.sp),
+              ),
+              SizedBox(width: 8.w),
+              SvgPicture.asset(
+                AppAssets.contact,
+                width: 40.w,
+                height: 40.h,
+                color: Appcolors.text,
               ),
             ],
           ),

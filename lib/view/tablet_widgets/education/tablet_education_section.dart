@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/education/mobile_education.dart';
 import 'package:my_portfolio/view/tablet_widgets/education/tablet_education.dart';
@@ -33,7 +34,7 @@ class _TabletEducationSectionState extends State<TabletEducationSection> {
                 AppAssets.education,
                 width: 70.w,
                 height: 70.h,
-                color: Colors.white,
+                color: Appcolors.text,
               ),
             ],
           ),

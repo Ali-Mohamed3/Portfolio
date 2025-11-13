@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/skills/mobile_skill.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
@@ -32,7 +33,7 @@ class _MobileSkillSectionState extends State<MobileSkillSection> {
                 AppAssets.rocket,
                 width: 40.w,
                 height: 40.h,
-                color: Colors.white,
+                color: Appcolors.text,
               ),
             ],
           ),

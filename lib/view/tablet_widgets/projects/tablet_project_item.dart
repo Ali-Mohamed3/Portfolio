@@ -26,7 +26,7 @@ class TabletProjectItem extends StatelessWidget {
       width: width * .55,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),
-        border: Border.all(width: 1.sp, color: Colors.white),
+        border: Border.all(width: 1.sp, color: Appcolors.text),
         color: Appcolors.secondary,
       ),
       child: Column(
@@ -60,7 +60,10 @@ class TabletProjectItem extends StatelessWidget {
           Center(
             child: Text(
               name,
-              style: Appstyles.primary.copyWith(fontSize: 30.sp),
+              style: Appstyles.primary.copyWith(
+                fontSize: 30.sp,
+                color: Colors.white,
+              ),
             ),
           ),
         ],

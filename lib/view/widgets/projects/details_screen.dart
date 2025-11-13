@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -25,7 +26,7 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff041112),
+      backgroundColor: Appcolors.primary,
       body: ListView(
         children: [
           Column(
@@ -71,7 +72,7 @@ class DetailsScreen extends StatelessWidget {
               Center(
                 child: SelectableText(
                   name,
-                  style: Appstyles.primary.copyWith(color: Colors.lightBlue),
+                  style: Appstyles.primary.copyWith(color: Appcolors.text),
                 ),
               ),
               SizedBox(height: 30.h),
@@ -93,7 +94,6 @@ class DetailsScreen extends StatelessWidget {
                   }
                 },
                 radius: 20.r,
-                color: Colors.lightBlue,
               ),
               SizedBox(height: 100.h),
             ],

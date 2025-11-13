@@ -21,7 +21,7 @@ class _TabletEducationState extends State<TabletEducation> {
       decoration: BoxDecoration(
         color: Appcolors.secondary,
         borderRadius: BorderRadius.circular(15.r),
-        border: Border.all(width: 1.w, color: Colors.white),
+        border: Border.all(width: 1.w, color: Appcolors.text),
       ),
       child: StreamBuilder(
         stream: sl<FirestoreController>().getEducation(),

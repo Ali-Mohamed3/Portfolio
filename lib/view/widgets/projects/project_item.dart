@@ -25,7 +25,7 @@ class ProjectItem extends StatelessWidget {
       width: width * .35,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),
-        border: Border.all(width: 1.sp, color: Colors.white),
+        border: Border.all(width: 1.w, color: Appcolors.text),
         color: Appcolors.secondary,
       ),
       child: Column(
@@ -59,7 +59,10 @@ class ProjectItem extends StatelessWidget {
           Center(
             child: SelectableText(
               name,
-              style: Appstyles.primary.copyWith(fontSize: 30.sp),
+              style: Appstyles.primary.copyWith(
+                fontSize: 30.sp,
+                color: Colors.white,
+              ),
             ),
           ),
         ],

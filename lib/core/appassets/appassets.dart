@@ -10,6 +10,10 @@ class AppAssets {
   static const String copyRight = "assets/icons/copyright-svgrepo-com (1).svg";
   static const String robot = "assets/icons/robot-svgrepo-com.svg";
   static const String bulb = "assets/icons/approval-svgrepo-com.svg";
+  static const String tools = "assets/icons/tools-svgrepo-com.svg";
+  static const String code = "assets/icons/code-circle-svgrepo-com.svg";
+  static const String certificates = "assets/icons/certificate-svgrepo-com.svg";
+  static const String projects = "assets/icons/wrench-line-svgrepo-com.svg";
   static const String contact =
       "assets/icons/contact-headset-communication-svgrepo-com.svg";
 }

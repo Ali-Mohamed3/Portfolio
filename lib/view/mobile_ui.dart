@@ -28,13 +28,13 @@ class _MobileUiState extends State<MobileUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff041112),
+      backgroundColor: Appcolors.primary,
       appBar: AppBar(
-        backgroundColor: Color(0xff041112),
+        backgroundColor: Appcolors.primary,
         title: Text(
           "Ali Mohamed Ali",
           style: Appstyles.primary.copyWith(
-            color: Colors.redAccent,
+            color: Appcolors.text,
             fontSize: 40.sp,
           ),
         ),

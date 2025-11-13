@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 
 class CursorAnimation extends StatefulWidget {
   final Widget childW;
@@ -28,7 +29,7 @@ class _CursorAnimationState extends State<CursorAnimation> {
             AnimatedContainer(
               duration: const Duration(milliseconds: 200),
               decoration: BoxDecoration(
-                color: _isIn ? Colors.red : Colors.transparent,
+                color: _isIn ? Appcolors.text : Colors.transparent,
                 borderRadius: BorderRadius.circular(50.r),
               ),
               child: widget.childW,

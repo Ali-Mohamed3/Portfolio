@@ -42,7 +42,7 @@ class _ContactWidgetState extends State<ContactWidget> {
             decoration: BoxDecoration(
               color: Appcolors.secondary,
               borderRadius: BorderRadius.circular(15.r),
-              border: Border.all(color: Colors.white),
+              border: Border.all(width: 1.w, color: Appcolors.text),
             ),
             child: Column(
               children: [
@@ -139,9 +139,9 @@ void showCustomDialogue(BuildContext context1, String text, Icon icon) {
           width: 500.w,
           height: 500.h,
           decoration: BoxDecoration(
-            color: Color(0xff041112),
+            color: Appcolors.primary,
             borderRadius: BorderRadius.circular(20.r),
-            border: Border.all(color: Colors.white),
+            border: Border.all(color: Appcolors.text),
           ),
           padding: EdgeInsets.all(MediaQuery.sizeOf(context).width * .02),
           child: Column(

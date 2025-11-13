@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/contact/mobile_contact_widget.dart';
 import 'package:my_portfolio/view/tablet_widgets/contact/tablet_contact_widget.dart';
@@ -27,6 +28,13 @@ class _TabletContactSectionState extends State<TabletContactSection> {
               SelectableText(
                 "Contact me",
                 style: Appstyles.primary.copyWith(fontSize: 35.sp),
+              ),
+              SizedBox(width: 16.w),
+              SvgPicture.asset(
+                AppAssets.contact,
+                width: 70.w,
+                height: 70.h,
+                color: Appcolors.text,
               ),
             ],
           ),
