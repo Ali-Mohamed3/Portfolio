@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/core/widgets/cursor_animation.dart';
 import 'package:my_portfolio/view/widgets/about_me/about_me_section.dart';
@@ -52,11 +53,11 @@ class _UiState extends State<Ui> {
         title: Text(
           "Ali Mohamed Ali",
           style: Appstyles.primary.copyWith(
-            color: Colors.redAccent,
+            color: Appcolors.text,
             fontSize: 40.sp,
           ),
         ),
-        backgroundColor: Color(0xff041112),
+        backgroundColor: Appcolors.primary,
         actionsPadding: EdgeInsets.only(left: 100.w),
         actions: [
           CursorAnimation(
@@ -70,7 +71,10 @@ class _UiState extends State<Ui> {
               },
               child: Text(
                 "Home",
-                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+                style: Appstyles.primary.copyWith(
+                  fontSize: 30.sp,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
@@ -79,7 +83,10 @@ class _UiState extends State<Ui> {
               onPressed: () => scrollToSection(aboutKey),
               child: Text(
                 "About",
-                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+                style: Appstyles.primary.copyWith(
+                  fontSize: 30.sp,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
@@ -88,7 +95,10 @@ class _UiState extends State<Ui> {
               onPressed: () => scrollToSection(projectsKey),
               child: Text(
                 "Projects",
-                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+                style: Appstyles.primary.copyWith(
+                  fontSize: 30.sp,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
@@ -97,13 +107,16 @@ class _UiState extends State<Ui> {
               onPressed: () => scrollToSection(contactKey),
               child: Text(
                 "Contact",
-                style: Appstyles.primary.copyWith(fontSize: 30.sp),
+                style: Appstyles.primary.copyWith(
+                  fontSize: 30.sp,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
         ],
       ),
-      backgroundColor: Color(0xff041112),
+      backgroundColor: Appcolors.primary,
       body: ListView(
         controller: _scrollController,
         children: [

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/projects/mobile_projects_widget.dart';
@@ -25,6 +28,13 @@ class _MobileProjectsSectionState extends State<MobileProjectsSection> {
               SelectableText(
                 "Projects",
                 style: Appstyles.primary.copyWith(fontSize: 35.sp),
+              ),
+              SizedBox(width: 8.w),
+              SvgPicture.asset(
+                AppAssets.projects,
+                width: 40.w,
+                height: 40.h,
+                color: Appcolors.text,
               ),
             ],
           ),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/programming_languages/mobile_programming_langs.dart';
 import 'package:my_portfolio/view/widgets/programming_languages/programming_langs.dart';
@@ -22,13 +25,17 @@ class _MobileProgrammingSectionState extends State<MobileProgrammingSection> {
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                width: 400.w,
-                child: SelectableText(
-                  "Programming languages",
-                  textAlign: TextAlign.center,
-                  style: Appstyles.primary.copyWith(fontSize: 35.sp),
-                ),
+              SelectableText(
+                "Programming languages",
+                textAlign: TextAlign.center,
+                style: Appstyles.primary.copyWith(fontSize: 35.sp),
+              ),
+              SizedBox(width: 8.w),
+              SvgPicture.asset(
+                AppAssets.code,
+                width: 40.w,
+                height: 40.h,
+                color: Appcolors.text,
               ),
             ],
           ),

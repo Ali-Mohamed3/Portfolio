@@ -46,7 +46,7 @@ class _TabletContactWidgetState extends State<TabletContactWidget> {
               decoration: BoxDecoration(
                 color: Appcolors.secondary,
                 borderRadius: BorderRadius.circular(40.r),
-                border: Border.all(color: Colors.white),
+                border: Border.all(color: Appcolors.text),
               ),
               child: Column(
                 children: [
@@ -140,35 +140,38 @@ void showCustomDialogue(BuildContext context1, String text, Icon icon) {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.r),
         ),
-        child: Container(
-          width: 500.w,
-          height: 350,
-          decoration: BoxDecoration(
-            color: Color(0xff041112),
-            borderRadius: BorderRadius.circular(20.r),
-            border: Border.all(color: Colors.white),
-          ),
-          padding: EdgeInsets.all(MediaQuery.sizeOf(context).width * .02),
-          child: Column(
-            children: [
-              icon,
-              SizedBox(height: 50.h),
-              SelectableText(
-                text,
-                style: Appstyles.secondary.copyWith(fontSize: 30.sp),
+        child: Wrap(
+          children: [
+            Container(
+              width: 500.w,
+              decoration: BoxDecoration(
+                color: Appcolors.primary,
+                borderRadius: BorderRadius.circular(20.r),
+                border: Border.all(color: Appcolors.text),
               ),
-              SizedBox(height: 170.h),
-              CustomButton(
-                height: 80.h,
-                width: 200.w,
-                radius: 50,
-                text: "Ok",
-                ontap: () {
-                  Navigator.pop(context);
-                },
+              padding: EdgeInsets.all(MediaQuery.sizeOf(context).width * .02),
+              child: Column(
+                children: [
+                  icon,
+                  SizedBox(height: 50.h),
+                  SelectableText(
+                    text,
+                    style: Appstyles.secondary.copyWith(fontSize: 30.sp),
+                  ),
+                  SizedBox(height: 150.h),
+                  CustomButton(
+                    height: 80.h,
+                    width: 200.w,
+                    radius: 50,
+                    text: "Ok",
+                    ontap: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
     },

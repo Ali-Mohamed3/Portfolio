@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/widgets/contact/contact_widget.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
@@ -21,7 +22,16 @@ class _ContactSectionState extends State<ContactSection> {
         ScrollAnimation(
           childW: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [SelectableText("Contact me", style: Appstyles.primary)],
+            children: [
+              SelectableText("Contact me", style: Appstyles.primary),
+              SizedBox(width: 16.w),
+              SvgPicture.asset(
+                AppAssets.contact,
+                width: 50.w,
+                height: 50.h,
+                color: Appcolors.text,
+              ),
+            ],
           ),
           duration: Duration(milliseconds: 750),
         ),

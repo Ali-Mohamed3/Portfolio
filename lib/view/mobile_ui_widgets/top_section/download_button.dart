@@ -34,7 +34,7 @@ class DownloadButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(radius ?? 20.r),
         ),
         padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 5.h),
-        side: BorderSide(width: 1.sp, color: Colors.white),
+        side: BorderSide(width: 1.sp, color: Appcolors.text),
       ),
 
       onPressed: () async {
@@ -47,7 +47,10 @@ class DownloadButton extends StatelessWidget {
           throw "couldn't launch url";
         }
       },
-      child: Text(text!, style: Appstyles.primary.copyWith(fontSize: 25.sp)),
+      child: Text(
+        text!,
+        style: Appstyles.primary.copyWith(fontSize: 25.sp, color: Colors.white),
+      ),
     );
   }
 }

@@ -47,7 +47,10 @@ class DownloadButton extends StatelessWidget {
           throw "couldn't launch url";
         }
       },
-      child: Text(text!, style: Appstyles.primary.copyWith(fontSize: 25.sp)),
+      child: Text(
+        text!,
+        style: Appstyles.primary.copyWith(fontSize: 25.sp, color: Colors.white),
+      ),
     );
   }
 }

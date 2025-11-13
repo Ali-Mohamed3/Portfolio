@@ -17,10 +17,10 @@ class ProgrammingItem extends StatelessWidget {
         color: Appcolors.secondary,
         borderRadius: BorderRadius.circular(25.r),
         border: Border(
-          left: BorderSide(width: 10.w, color: Colors.white),
-          right: BorderSide(width: 1.w, color: Colors.white),
-          top: BorderSide(width: 1.w, color: Colors.white),
-          bottom: BorderSide(width: 1.w, color: Colors.white),
+          left: BorderSide(width: 10.w, color: Appcolors.text),
+          right: BorderSide(width: 1.w, color: Appcolors.text),
+          top: BorderSide(width: 1.w, color: Appcolors.text),
+          bottom: BorderSide(width: 1.w, color: Appcolors.text),
         ),
       ),
       child: Row(

@@ -22,7 +22,7 @@ class MobileSkillItem extends StatelessWidget {
             decoration: BoxDecoration(
               color: Appcolors.secondary,
               borderRadius: BorderRadius.circular(50.r),
-              border: Border.all(width: 1.w, color: Colors.white),
+              border: Border.all(width: 1.w, color: Appcolors.text),
             ),
             child: Column(
               children: [

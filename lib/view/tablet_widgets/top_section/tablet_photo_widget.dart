@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 
 class TabletPhotoWidget extends StatefulWidget {
   final String url;
@@ -21,7 +22,11 @@ class _TabletPhotoWidgetState extends State<TabletPhotoWidget> {
         shape: BoxShape.circle,
 
         boxShadow: [
-          BoxShadow(color: Colors.white, blurRadius: 20, spreadRadius: 5),
+          BoxShadow(
+            color: Appcolors.text,
+            blurRadius: 10.sp,
+            spreadRadius: 5.sp,
+          ),
         ],
       ),
       child: AspectRatio(

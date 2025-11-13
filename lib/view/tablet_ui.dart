@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 
 import 'package:my_portfolio/view/tablet_widgets/about_me/tablet_about_me_section.dart';
@@ -44,13 +45,13 @@ class _TabletUiState extends State<TabletUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff041112),
+      backgroundColor: Appcolors.primary,
       appBar: AppBar(
-        backgroundColor: Color(0xff041112),
+        backgroundColor: Appcolors.primary,
         title: Text(
           "Ali Mohamed Ali",
           style: Appstyles.primary.copyWith(
-            color: Colors.redAccent,
+            color: Appcolors.text,
             fontSize: 30.sp,
           ),
         ),

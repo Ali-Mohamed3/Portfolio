@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/skills/mobile_skill.dart';
 import 'package:my_portfolio/view/tablet_widgets/skills/tablet_skill.dart';
@@ -33,7 +34,7 @@ class _TabletSkillSectionState extends State<TabletSkillSection> {
                 AppAssets.rocket,
                 width: 70.w,
                 height: 70.h,
-                color: Colors.white,
+                color: Appcolors.text,
               ),
             ],
           ),

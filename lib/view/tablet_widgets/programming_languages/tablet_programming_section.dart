@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/programming_languages/mobile_programming_langs.dart';
 import 'package:my_portfolio/view/tablet_widgets/programming_languages/tablet_programming_langs.dart';
@@ -26,6 +29,13 @@ class _TabletProgrammingSectionState extends State<TabletProgrammingSection> {
               SelectableText(
                 "Programming languages",
                 style: Appstyles.primary.copyWith(fontSize: 35.sp),
+              ),
+              SizedBox(width: 16.w),
+              SvgPicture.asset(
+                AppAssets.code,
+                width: 70.w,
+                height: 70.h,
+                color: Appcolors.text,
               ),
             ],
           ),

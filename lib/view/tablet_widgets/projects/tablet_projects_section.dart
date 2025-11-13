@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/core/widgets/custom_button.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/projects/mobile_projects_widget.dart';
@@ -26,6 +29,13 @@ class _TabletProjectsSectionState extends State<TabletProjectsSection> {
               SelectableText(
                 "Projects",
                 style: Appstyles.primary.copyWith(fontSize: 35.sp),
+              ),
+              SizedBox(width: 16.w),
+              SvgPicture.asset(
+                AppAssets.projects,
+                width: 70.w,
+                height: 70.h,
+                color: Appcolors.text,
               ),
             ],
           ),

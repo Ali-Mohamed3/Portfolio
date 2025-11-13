@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/mobile_ui_widgets/about_me/mobile_description.dart';
 import 'package:my_portfolio/view/widgets/about_me/description_widget.dart';
@@ -32,7 +33,7 @@ class _MobileAboutMeSectionState extends State<MobileAboutMeSection> {
                 AppAssets.info,
                 width: 40.w,
                 height: 40.h,
-                color: Colors.white,
+                color: Appcolors.text,
               ),
             ],
           ),

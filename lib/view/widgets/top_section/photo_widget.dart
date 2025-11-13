@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 
 class PhotoWidget extends StatelessWidget {
   final String url;
@@ -15,9 +16,9 @@ class PhotoWidget extends StatelessWidget {
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(
-            blurRadius: 20.sp,
-            spreadRadius: 10.sp,
-            color: Colors.white,
+            blurRadius: 10.sp,
+            spreadRadius: 5.sp,
+            color: Appcolors.text,
           ),
         ],
       ),

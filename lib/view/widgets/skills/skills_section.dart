@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/core/appassets/appassets.dart';
+import 'package:my_portfolio/core/appcolors/appcolors.dart';
 import 'package:my_portfolio/core/appstyles/appstyles.dart';
 import 'package:my_portfolio/view/widgets/scroll_animation.dart';
 import 'package:my_portfolio/view/widgets/skills/skill_widget.dart';
@@ -28,7 +29,7 @@ class _SkillsSectionState extends State<SkillsSection> {
                 AppAssets.rocket,
                 width: 50.w,
                 height: 50.h,
-                color: Colors.white,
+                color: Appcolors.text,
               ),
             ],
           ),
