@@ -49,7 +49,10 @@ class _UiState extends State<Ui> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         title: Text(
           "Ali Mohamed Ali",
           style: Appstyles.primary.copyWith(
@@ -57,7 +60,16 @@ class _UiState extends State<Ui> {
             fontSize: 40.sp,
           ),
         ),
-        backgroundColor: Appcolors.primary,
+        flexibleSpace: DecoratedBox(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Appcolors.primary, Appcolors.secondary],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+        ),
+        // backgroundColor: Appcolors.primary,
         actionsPadding: EdgeInsets.only(left: 100.w),
         actions: [
           CursorAnimation(
@@ -116,47 +128,61 @@ class _UiState extends State<Ui> {
           ),
         ],
       ),
-      backgroundColor: Appcolors.primary,
-      body: ListView(
-        controller: _scrollController,
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 200.sp, vertical: 20.sp),
-            child: Column(
-              children: [
-                SizedBox(height: 20.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 15.w),
-                  child: TopSection(),
-                ),
-                SizedBox(height: 132.h),
-                Container(key: aboutKey, child: AboutMeSection()),
-                SizedBox(height: 150.h),
-                EducationSection(),
-
-                SizedBox(height: 150.h),
-                SkillsSection(),
-                SizedBox(height: 300.h),
-                ProgrammingSection(),
-                SizedBox(height: 150.h),
-                ToolsSection(),
-                SizedBox(height: 150.h),
-                Container(key: projectsKey, child: ProjectsSection()),
-                SizedBox(height: 150.h),
-                CertificatesSection(),
-                SizedBox(height: 150.h),
-                Container(key: contactKey, child: ContactSection()),
-                SizedBox(height: 150.h),
-                ScrollAnimation(
-                  childW: Divider(),
-                  duration: Duration(milliseconds: 750),
-                ),
-                SizedBox(height: 40.h),
-                BottomSection(),
-              ],
-            ),
+      backgroundColor: Colors.transparent,
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Appcolors.primary, Appcolors.secondary],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
-        ],
+        ),
+        child: ListView(
+          controller: _scrollController,
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 200.sp,
+                vertical: 20.sp,
+              ),
+              child: Column(
+                children: [
+                  SizedBox(height: 20.h),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.w),
+                    child: TopSection(),
+                  ),
+                  SizedBox(height: 132.h),
+                  Container(key: aboutKey, child: AboutMeSection()),
+                  SizedBox(height: 150.h),
+                  EducationSection(),
+
+                  SizedBox(height: 150.h),
+                  SkillsSection(),
+                  SizedBox(height: 300.h),
+                  ProgrammingSection(),
+                  SizedBox(height: 150.h),
+                  ToolsSection(),
+                  SizedBox(height: 150.h),
+                  Container(key: projectsKey, child: ProjectsSection()),
+                  SizedBox(height: 150.h),
+                  CertificatesSection(),
+                  SizedBox(height: 150.h),
+                  Container(key: contactKey, child: ContactSection()),
+                  SizedBox(height: 150.h),
+                  ScrollAnimation(
+                    childW: Divider(),
+                    duration: Duration(milliseconds: 750),
+                  ),
+                  SizedBox(height: 40.h),
+                  BottomSection(),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

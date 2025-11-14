@@ -29,7 +29,7 @@ class _CursorAnimationState extends State<CursorAnimation> {
             AnimatedContainer(
               duration: const Duration(milliseconds: 200),
               decoration: BoxDecoration(
-                color: _isIn ? Appcolors.text : Colors.transparent,
+                color: _isIn ? Appcolors.buttonColor : Colors.transparent,
                 borderRadius: BorderRadius.circular(50.r),
               ),
               child: widget.childW,

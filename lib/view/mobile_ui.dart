@@ -28,9 +28,10 @@ class _MobileUiState extends State<MobileUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Appcolors.primary,
+      extendBodyBehindAppBar: true,
+      // backgroundColor: Appcolors.primary,
       appBar: AppBar(
-        backgroundColor: Appcolors.primary,
+        backgroundColor: Colors.transparent,
         title: Text(
           "Ali Mohamed Ali",
           style: Appstyles.primary.copyWith(
@@ -38,44 +39,67 @@ class _MobileUiState extends State<MobileUi> {
             fontSize: 40.sp,
           ),
         ),
-      ),
-      body: ListView(
-        children: [
-          SizedBox(height: 30.h),
-          Center(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30.sp, vertical: 20.sp),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  MobileTopSection(),
-                  SizedBox(height: 100.h),
-                  MobileAboutMeSection(),
-                  SizedBox(height: 100.h),
-                  MobileEducationSection(),
-                  SizedBox(height: 100.h),
-                  MobileSkillSection(),
-                  SizedBox(height: 100.h),
-                  MobileProgrammingSection(),
-                  SizedBox(height: 100.h),
-                  MobileToolsSection(),
-                  SizedBox(height: 100.h),
-                  MobileProjectsSection(),
-                  SizedBox(height: 100.h),
-                  MobileCertificatesSection(),
-                  SizedBox(height: 100.h),
-                  MobileContactSection(),
-                  ScrollAnimation(
-                    childW: Divider(),
-                    duration: Duration(milliseconds: 750),
-                  ),
-                  SizedBox(height: 40.h),
-                  MobileBottomSection(),
-                ],
-              ),
+        flexibleSpace: DecoratedBox(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Appcolors.primary, Appcolors.secondary],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
           ),
-        ],
+        ),
+      ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Appcolors.primary, Appcolors.secondary],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: ListView(
+          children: [
+            SizedBox(height: 30.h),
+            Center(
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 30.sp,
+                  vertical: 20.sp,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    MobileTopSection(),
+                    SizedBox(height: 100.h),
+                    MobileAboutMeSection(),
+                    SizedBox(height: 100.h),
+                    MobileEducationSection(),
+                    SizedBox(height: 100.h),
+                    MobileSkillSection(),
+                    SizedBox(height: 100.h),
+                    MobileProgrammingSection(),
+                    SizedBox(height: 100.h),
+                    MobileToolsSection(),
+                    SizedBox(height: 100.h),
+                    MobileProjectsSection(),
+                    SizedBox(height: 100.h),
+                    MobileCertificatesSection(),
+                    SizedBox(height: 100.h),
+                    MobileContactSection(),
+                    ScrollAnimation(
+                      childW: Divider(),
+                      duration: Duration(milliseconds: 750),
+                    ),
+                    SizedBox(height: 40.h),
+                    MobileBottomSection(),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
