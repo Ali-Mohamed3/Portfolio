@@ -45,9 +45,10 @@ class _TabletUiState extends State<TabletUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Appcolors.primary,
+      extendBodyBehindAppBar: true,
+      // backgroundColor: Appcolors.primary,
       appBar: AppBar(
-        backgroundColor: Appcolors.primary,
+        backgroundColor: Colors.transparent,
         title: Text(
           "Ali Mohamed Ali",
           style: Appstyles.primary.copyWith(
@@ -56,44 +57,58 @@ class _TabletUiState extends State<TabletUi> {
           ),
         ),
       ),
-      body: ListView(
-        controller: _scrollController,
-        children: [
-          Center(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 70.sp, vertical: 50.sp),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  TabletTopSection(),
-                  SizedBox(height: 200.h),
-                  TabletAboutMeSection(),
-                  SizedBox(height: 200.h),
-                  TabletEducationSection(),
-                  SizedBox(height: 200.h),
-                  TabletSkillSection(),
-                  SizedBox(height: 200.h),
-                  TabletProgrammingSection(),
-                  SizedBox(height: 200.h),
-                  TabletToolsSection(),
-                  SizedBox(height: 200.h),
-                  TabletProjectsSection(),
-                  SizedBox(height: 200.h),
-                  TabletCertificatesSection(),
-                  SizedBox(height: 200.h),
-                  TabletContactSection(),
-                  SizedBox(height: 200.h),
-                  ScrollAnimation(
-                    childW: Divider(),
-                    duration: Duration(milliseconds: 750),
-                  ),
-                  SizedBox(height: 40.h),
-                  TabletBottomSection(),
-                ],
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Appcolors.primary, Appcolors.secondary],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: ListView(
+          controller: _scrollController,
+          children: [
+            Center(
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 70.sp,
+                  vertical: 50.sp,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    TabletTopSection(),
+                    SizedBox(height: 200.h),
+                    TabletAboutMeSection(),
+                    SizedBox(height: 200.h),
+                    TabletEducationSection(),
+                    SizedBox(height: 200.h),
+                    TabletSkillSection(),
+                    SizedBox(height: 200.h),
+                    TabletProgrammingSection(),
+                    SizedBox(height: 200.h),
+                    TabletToolsSection(),
+                    SizedBox(height: 200.h),
+                    TabletProjectsSection(),
+                    SizedBox(height: 200.h),
+                    TabletCertificatesSection(),
+                    SizedBox(height: 200.h),
+                    TabletContactSection(),
+                    SizedBox(height: 200.h),
+                    ScrollAnimation(
+                      childW: Divider(),
+                      duration: Duration(milliseconds: 750),
+                    ),
+                    SizedBox(height: 40.h),
+                    TabletBottomSection(),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
